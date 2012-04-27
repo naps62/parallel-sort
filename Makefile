@@ -1,0 +1,2 @@
+default:
+	cd src; $_
