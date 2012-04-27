@@ -15,7 +15,7 @@ tests: test.cpp
 	g++ test.cpp -o $(EXE_TST) $(LIB)
 
 sequential: $(EXE_SEQ)
-	@echo "SEQ version: To be implemented"
+	g++ sort.seq.cpp -o $(EXE_SEQ) $(LIB)
 
 omp: $(EXE_OMP)
 	@echo "OMP version: To be implemented"
