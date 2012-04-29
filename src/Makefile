@@ -1,24 +1,36 @@
 EXE_SEQ=../bin/sort.seq
-EXE_OMP=../bin/sort.omp
 EXE_MPI=../bin/sort.mpi
+RAD_SEQ=../bin/radix.seq
+RAD_MPI=../bin/radix.mpi
 EXE_TST=../bin/tests
 
 .PHONY: $(EXE_SEQ) $(EXE_OMP) $(EXE_MPI) $(EXE_TST)
 
+CC=g++
+CXXFLAGS=-g
 LIB=-lrt
 
 default: all
 
-all: tests sequential omp mpi
+all: seq mpi rad rad.mpi
 
 tests: test.cpp
-	g++ test.cpp -o $(EXE_TST) $(LIB)
+	g++ test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
-sequential: $(EXE_SEQ)
-	g++ sort.seq.cpp -o $(EXE_SEQ) $(LIB)
-
-omp: $(EXE_OMP)
-	@echo "OMP version: To be implemented"
+seq: common.o sort.seq.o main.o
+	g++ main.o common.o sort.seq.o -o $(EXE_SEQ) $(LIB)
 
 mpi: $(EXE_MPI)
-	@echo "MPI version: To be implemented"
+	@echo Not yet implemented
+	#mpic++ sort.mpi.cpp -c
+	#mpic++ main.o common.o sort.mpi.o -o $(EXE_MPI) $(LIB)
+
+rad: common.o radix.seq.o main.o
+	g++ main.o common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
+
+rad.mpi:
+	mpic++ radix.mpi.cpp -c
+	mpic++ main.o common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+
+clean:
+	$(RM) *.o
