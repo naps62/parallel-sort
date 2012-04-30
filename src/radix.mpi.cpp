@@ -10,63 +10,72 @@
 #include <mpi.h>
 using namespace std;
 
-#define GET_BUCKET_NUM(elem, mask, g, i) ((elem) & (mask) >> ((g) * (i)))
+#define GET_BUCKET_NUM(elem, mask, g, i) (((elem) & (mask)) >> ((g) * (i)))
 
-void test_data(vector<int> &arr, int id) {
+enum Tags {
+	TAG_KEY_SEND = 1,
+};
+
+void test_data(vector<int> *arr, int id) {
+	srand(time(NULL));
+	//for(unsigned int i = 0; i < arr->size(); ++i)
+	//	(*arr)[i] = rand() % 10000;
 	switch (id) {
 		case 0:
-			arr[0] = 0;
-			arr[1] = 1;
-			arr[2] = 1;
-			arr[3] = 1;
-			arr[4] = 2;
-			arr[5] = 2;
-			arr[6] = 2;
-			arr[7] = 2;
-			arr[8] = 3;
-			arr[9] = 3;
+			(*arr)[0] = 0x0000;
+			(*arr)[1] = 0x0001;
+			(*arr)[2] = 0x0001;
+			(*arr)[3] = 0x0001;
+			(*arr)[4] = 0x0002;
+			(*arr)[5] = 0x0002;
+			(*arr)[6] = 0x0002;
+			(*arr)[7] = 0x0002;
+			(*arr)[8] = 0x0003;
+			(*arr)[9] = 0x0003;
 			break;
 		case 1:
-			arr[0] = 0;
-			arr[1] = 0;
-			arr[2] = 0;
-			arr[3] = 1;
-			arr[4] = 1;
-			arr[5] = 1;
-			arr[6] = 1;
-			arr[7] = 1;
-			arr[8] = 1;
-			arr[9] = 2;
+			(*arr)[0] = 0x0000;
+			(*arr)[1] = 0x0000;
+			(*arr)[2] = 0x0000;
+			(*arr)[3] = 0x0001;
+			(*arr)[4] = 0x0001;
+			(*arr)[5] = 0x00E4;
+			(*arr)[6] = 0x0001;
+			(*arr)[7] = 0x0001;
+			(*arr)[8] = 0x0001;
+			(*arr)[9] = 0x0002;
 			break;
 		case 2:
-			arr[0] = 1;
-			arr[1] = 1;
-			arr[2] = 1;
-			arr[3] = 2;
-			arr[4] = 2;
-			arr[5] = 2;
-			arr[6] = 2;
-			arr[7] = 2;
-			arr[8] = 3;
-			arr[9] = 3;
+			(*arr)[0] = 0x0001;
+			(*arr)[1] = 0x0001;
+			(*arr)[2] = 0x0001;
+			(*arr)[3] = 0x0002;
+			(*arr)[4] = 0x0002;
+			(*arr)[5] = 0x0002;
+			(*arr)[6] = 0x0002;
+			(*arr)[7] = 0x0002;
+			(*arr)[8] = 0x0003;
+			(*arr)[9] = 0x0003;
 			break;
 		case 3:
-			arr[0] = 0;
-			arr[1] = 1;
-			arr[2] = 1;
-			arr[3] = 2;
-			arr[4] = 2;
-			arr[5] = 3;
-			arr[6] = 3;
-			arr[7] = 3;
-			arr[8] = 3;
-			arr[9] = 3;
+			(*arr)[0] = 0x0000;
+			(*arr)[1] = 0x0001;
+			(*arr)[2] = 0x0001;
+			(*arr)[3] = 0x0002;
+			(*arr)[4] = 0x0002;
+			(*arr)[5] = 0x0003;
+			(*arr)[6] = 0x0003;
+			(*arr)[7] = 0x0003;
+			(*arr)[8] = 0x0003;
+			(*arr)[9] = 0x0003;
 			break;
 	}
 }
 
+/**
+ * it is assumed that B = P, only one bucket per processor
+ */
 void sort(int argc, char *argv[], int len, Timer timer) {
-	MPI_Status status;
 	int id, size;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &id);
@@ -75,70 +84,92 @@ void sort(int argc, char *argv[], int len, Timer timer) {
 	unsigned int p = size;					// num of processors
 	unsigned int n = len;					// problem size	
 	unsigned int n_per_cpu = n / p;			// number of elements per cpu
-	unsigned int g = 4;						// num bits for each pass
+	unsigned int g = 2;						// num bits for each pass
 	unsigned int b = (1 << g);				// num of buckets (2^g)
 	unsigned int r = b / g;					// num of rounds
 
 	unsigned int mask = ((1 << g) - 1);		// initial mask to get key
 
-	vector<int> arr(10);
+	vector<int> *arr = new vector<int>(len);
 
 	// generate test data
 	test_data(arr, id);
 
-	// it is assumed that B = P, only one bucket per processor
-	vector<int> bin_counts(r);		  // bin counts for each processor
+	vector<vector<int> > buckets(b);  // the buckets
+	vector<int> bin_counts(b);		  // bin counts for each processor
 	vector<int> bin_counts_trans(p);  // bin counts transposed
+
+	vector<int> bin_counts_accum(p);  // accumulated values for bin_count. indicates for each process, where the values for this bucket should go
+	vector<int> *this_bucket;
+
+	vector<MPI_Request> requests(p);  // request handles for key communication
+	vector<MPI_Status>  status(p);	  // status of key communication recvs
+
+
+	cout << id << " --- " << arr_str(*arr) << endl;
+	MPI_Barrier(MPI_COMM_WORLD);
 
 	for(unsigned int i = 0; i < r; ++i)
 		bin_counts[i] = 0;
 
-	for(unsigned int i = 0; mask != 0; mask <<= g, ++i) {
+	for(unsigned int round = 0; mask != 0; mask <<= g, ++round) {
 
-		// perform bin count
-		for(vector<int>::iterator elem = arr.begin(); elem != arr.end(); ++elem) {
-			unsigned int bucket = GET_BUCKET_NUM(*elem, mask, g, i);
+		// clear buckets
+		for(unsigned int i = 0; i < bin_counts.size(); ++i) {
+			bin_counts[i] = 0;
+			buckets[i].clear();
+		}
+
+		// fill buckets and bin_count
+		for(vector<int>::iterator elem = arr->begin(); elem != arr->end(); ++elem) {
+			unsigned int bucket = GET_BUCKET_NUM(*elem, mask, g, round);
 			bin_counts[bucket]++;
+			buckets[bucket].push_back(*elem);
 		}
 
+		bin_counts_trans[id] = bin_counts[id];
+		// transpose bin_count info
 		MPI_Alltoall(&bin_counts[0], 1, MPI_INT, &bin_counts_trans[0], 1, MPI_INT, MPI_COMM_WORLD);
-	}
 
-
-	return;
-	// create buckets
-	vector<vector<int> > buckets(b);
-
-	// find max element
-	int max   = *max_element(arr.begin(), arr.end());
-	//int pow10 = 1;
-
-	// begin radix sort
-	for(unsigned int i = 0; mask != 0; mask <<= g, ++i) {
-
-		// determine which bucket each element should enter
-		for(vector<int>::iterator elem = arr.begin(); elem != arr.end(); ++elem) {
-
-			// calculate bucket number
-			size_t const bucket_num = (*elem & mask) >> (g * i);
-			// add the element to the list in the bucket
-			buckets[ bucket_num ].push_back(*elem);
+		// count total size of bucket for this process, and alloc it. also compute bin_counts_accum
+		int total_bucket_size = bin_counts_trans[0];
+		bin_counts_accum[0] = 0;
+		for(unsigned int i = 1; i < bin_counts_trans.size(); ++i) {
+			bin_counts_accum[i] = total_bucket_size;
+			total_bucket_size += bin_counts_trans[i];
 		}
 
-		// transfer results of buckets back int main array
-		vector<int>::iterator store_pos = arr.begin();
+		this_bucket = new vector<int>(total_bucket_size);
 
-		for(vector<vector<int> >::iterator bucket = buckets.begin(); bucket != buckets.end(); ++bucket) {
-
-			// for each element in this bucket
-			for(vector<int>::iterator bucket_elem = bucket->begin(); bucket_elem != bucket->end(); ++bucket_elem) {
-				*store_pos++ = *bucket_elem;
+		// send keys across each process
+		for(unsigned int i = 0; i < b; ++i) {
+			// send data from a single bucket to its corresponding process
+			if (i != id) {
+				MPI_Isend(&(buckets[i][0]), buckets[i].size(), MPI_INT, i, TAG_KEY_SEND, MPI_COMM_WORLD, &requests[i]);
 			}
-
-			// clear the current bucket
-			bucket->clear();
 		}
+
+		// recv keys
+		for(unsigned int i = 0; i < p; ++i) {
+			// if its the same process, copy data from buckets[i] to this_bucket
+			if (i == id)
+				memcpy(&(*this_bucket)[ bin_counts_accum[i] ], &(buckets[i][0]), buckets[i].size() * sizeof(int));
+
+			// otherwise recv data from process i
+			else
+				MPI_Recv(&(*this_bucket)[ bin_counts_accum[i] ], bin_counts_trans[i], MPI_INT, i, TAG_KEY_SEND, MPI_COMM_WORLD, &status[i]);
+		}
+
+
+		MPI_Barrier(MPI_COMM_WORLD);
+		delete arr;
+		arr = this_bucket;
+
 	}
+
+	if (arr->size() > 0)
+		cout << id << " " << arr_str(*arr) << endl;
+	
 
 	MPI_Finalize();
 }

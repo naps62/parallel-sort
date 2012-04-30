@@ -29,8 +29,8 @@ rad: common.o radix.seq.o main.o
 	g++ main.o common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
 rad.mpi:
-	mpic++ radix.mpi.cpp -c
-	mpic++ main.o common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+	mpic++ -g radix.mpi.cpp -c
+	mpic++ -g main.o common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
 
 clean:
 	$(RM) *.o
