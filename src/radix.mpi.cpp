@@ -7,6 +7,8 @@
 #include <vector>
 #include <limits>
 #include <iostream>
+#include <string>
+#include <sstream>
 #include <mpi.h>
 using namespace std;
 
@@ -21,62 +23,14 @@ enum OrderCodes {
 enum Tags {
 	TAG_KEY_SEND = 1,
 	TAG_CHECK_ORDER = 2,
+	TAG_COUT_SIZE = 3,
+	TAG_COUT_DATA = 4,
 };
 
 void test_data(vector<int> *arr, int id, int size) {
-	srand(time(NULL));
+	srand(time(NULL) * id);
 	for(unsigned int i = 0; i < arr->size(); ++i)
 		(*arr)[i] = rand();
-	/*switch (id) {
-		case 0:
-			(*arr)[0] = 0x0000;
-			(*arr)[1] = 0x0001;
-			(*arr)[2] = 0x0001;
-			(*arr)[3] = 0x0001;
-			(*arr)[4] = 0x0002;
-			(*arr)[5] = 0x0002;
-			(*arr)[6] = 0x0002;
-			(*arr)[7] = 0x0002;
-			(*arr)[8] = 0x0003;
-			(*arr)[9] = 0x0003;
-			break;
-		case 1:
-			(*arr)[0] = 0x0000;
-			(*arr)[1] = 0x0000;
-			(*arr)[2] = 0x0000;
-			(*arr)[3] = 0x0001;
-			(*arr)[4] = 0x0001;
-			(*arr)[5] = 0x00E4;
-			(*arr)[6] = 0x0001;
-			(*arr)[7] = 0x0001;
-			(*arr)[8] = 0x0001;
-			(*arr)[9] = 0x0002;
-			break;
-		case 2:
-			(*arr)[0] = 0x0001;
-			(*arr)[1] = 0x0001;
-			(*arr)[2] = 0x0001;
-			(*arr)[3] = 0x0002;
-			(*arr)[4] = 0x0002;
-			(*arr)[5] = 0x0002;
-			(*arr)[6] = 0x0002;
-			(*arr)[7] = 0x0002;
-			(*arr)[8] = 0x0003;
-			(*arr)[9] = 0x0003;
-			break;
-		case 3:
-			(*arr)[0] = 0x0000;
-			(*arr)[1] = 0x0001;
-			(*arr)[2] = 0x0001;
-			(*arr)[3] = 0x0002;
-			(*arr)[4] = 0x0002;
-			(*arr)[5] = 0x0003;
-			(*arr)[6] = 0x0003;
-			(*arr)[7] = 0x0003;
-			(*arr)[8] = 0x0003;
-			(*arr)[9] = 0x0003;
-			break;
-	}*/
 }
 
 /**
@@ -159,10 +113,6 @@ void radix_mpi(vector<int> *&arr, int id, int size) {
 		arr = this_bucket;
 
 	}
-
-	if (arr->size() > 0)
-		cout << id << " " << arr_str(*arr) << endl;
-	
 }
 
 int check_array_order(vector<int> *&arr, int id, int size) {
@@ -206,6 +156,33 @@ int check_array_order(vector<int> *&arr, int id, int size) {
 	return ORDER_ONLY_MASTER;
 }
 
+void ordered_print(string str, int id, int size) {
+	int buff_size;
+	// if master, receive data and print it
+	if (id == 0) {
+		MPI_Status status;
+		char *buff;
+		for(unsigned int i = 0; i < size; ++i) {
+			if (i != id) {
+				MPI_Recv(&buff_size, 1, MPI_INT, i, TAG_COUT_SIZE, MPI_COMM_WORLD, &status);
+				buff = new char[buff_size+1];
+				buff[buff_size] = '\0';
+				MPI_Recv(&buff, buff_size, MPI_BYTE, i, TAG_COUT_DATA, MPI_COMM_WORLD, &status);
+				cout << buff;
+			} else {
+				cout << str;
+			}
+		}
+	}
+
+	// else send it to master
+	else {
+		buff_size = str.size();
+		MPI_Send(&buff_size,  1,          MPI_INT,  0, TAG_COUT_SIZE, MPI_COMM_WORLD);
+		MPI_Send(&buff_size, str.size(), MPI_BYTE, 0, TAG_COUT_DATA, MPI_COMM_WORLD);
+	}
+}
+
 int main(int argc, char **argv) {
 	int id, size;
 	MPI_Init(&argc, &argv);
@@ -214,6 +191,7 @@ int main(int argc, char **argv) {
 
 	Timer timer;
 	int len;
+	stringstream ss;
 
 	if (argc > 1)	len = atoi(argv[1]);
 	else			len = LEN;
@@ -222,13 +200,27 @@ int main(int argc, char **argv) {
 	// generate test data
 	test_data(arr, id, size);
 
-	cout << "[" << id << "] -> " << arr->size() << " " << arr_str(*arr) << endl;
+	ss << "[" << id << "] initial array: " << " " << arr_str(*arr) << endl;
+	//ordered_print(ss.str(), id, size);
+	cout << ss.str();
+	ss.str("");
 
 	MPI_Barrier(MPI_COMM_WORLD);
 
 	timer.start();
 	radix_mpi(arr, id, size);
 	timer.stop();
+
+	MPI_Barrier(MPI_COMM_WORLD);
+
+	ss << "[" << id << "]";
+	if (arr->size() > 0)
+		ss << arr_str(*arr) << endl;
+	//ordered_print(ss.str(), id, size);
+	cout << ss.str();
+	ss.str("");
+
+	MPI_Barrier(MPI_COMM_WORLD);
 
 	int order = check_array_order(arr, id, size);
 	switch (order) {
@@ -247,7 +239,9 @@ int main(int argc, char **argv) {
 	
 	MPI_Barrier(MPI_COMM_WORLD);
 
-	cout << "id: " << id << " - solution took: " << timer.get() * 1.0e-3 << " usec" << endl;
+	ss << "id: " << id << " - solution took: " << timer.get() * 1.0e-3 << " usec" << endl;
+	//ordered_print(ss.str(), id, size);
+	cout << ss.str();
 
 	MPI_Finalize();
 }

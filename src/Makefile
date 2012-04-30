@@ -17,7 +17,7 @@ all: radix radix.mpi
 tests: test.cpp
 	g++ test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
-radix: common.o radix.seq.o main.o
+radix: common.o radix.seq.o
 	g++ common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
 radix.mpi:
