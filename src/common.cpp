@@ -51,9 +51,9 @@ int check_array_order(vector<int> arr) {
 
 vector<int> get_test_array(int n) {
 	srand(time(NULL));
-	//while(n-- > 0) {
-	//	def_arr.push_back(rand() % 100000);
-	//}
+	while(n-- > 0) {
+		def_arr.push_back(rand() % 100000);
+	}
 	/*def_arr.push_back(1);
 	def_arr.push_back(2);
 	def_arr.push_back(4);
@@ -62,8 +62,8 @@ vector<int> get_test_array(int n) {
 	def_arr.push_back(32);
 	def_arr.push_back(64);
 	def_arr.push_back(128);*/
-	for(int i = 6; i >= 0; --i)
-		def_arr.push_back(1 << i);
+	//for(int i = 6; i >= 0; --i)
+	//	def_arr.push_back(1 << i);
 
 
 	return def_arr;

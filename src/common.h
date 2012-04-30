@@ -34,7 +34,6 @@ class Timer {
 
 void dump_arr(vector<int> arr);
 string arr_str(vector<int> arr);
-int check_array_order(vector<int> arr);
 vector<int> get_test_array(int n = LEN);
 
 #endif // _H_COMMON_
