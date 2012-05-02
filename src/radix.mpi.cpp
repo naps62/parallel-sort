@@ -12,6 +12,8 @@
 #include <mpi.h>
 using namespace std;
 
+
+// given a key and a mask, calcs the bucket to where the key belongs
 #define GET_BUCKET_NUM(elem, mask, g, i) (((elem) & (mask)) >> ((g) * (i)))
 
 enum OrderCodes {
@@ -25,6 +27,7 @@ enum Tags {
 	TAG_CHECK_ORDER = 2,
 	TAG_COUT_SIZE = 3,
 	TAG_COUT_DATA = 4,
+	TAG_BUCKET_COUNT = 5,
 };
 
 void test_data(vector<int> *arr, int id, int size) {
@@ -33,59 +36,107 @@ void test_data(vector<int> *arr, int id, int size) {
 		(*arr)[i] = rand();
 }
 
+// count number of bits set to 1 in a number
+unsigned int popcount(unsigned int x) {
+	unsigned int c;
+	for(c = 0; x; ++c) x &= x-1;
+	return c;
+}
+
+// maps a given bucket to a cpu, given max number of buckets per cpu
+#define BUCKET_TO_CPU(bucket)		(((bucket) & (~((bpp) - 1))) >> bpp_bc)
+#define BUCKET_IN_CPU(bucket)       ( (bucket) & (  (bpp) - 1)            )
+
 /**
  * it is assumed that B = P, only one bucket per processor
+ *
+ * \param arr Where to stop the ordered array (one local array per processor)
+ * \param id  Id of this processs
+ * \param p   Number of processor (equivalent to MPI_size)
+ * \param g   Number of bits to use for each mask (must be power of 2)
  */
-void radix_mpi(vector<int> *&arr, int id, int size) {
+void radix_mpi(vector<int> *&arr, const int id, const int p, const unsigned int g) {
 
-	unsigned int p = size;					// num of processors
-	unsigned int n = arr->size();			// problem size	
-	unsigned int n_per_cpu = n / p;			// number of elements per cpu
-	unsigned int g = 2;						// num bits for each pass
-	unsigned int b = (1 << g);				// num of buckets (2^g)
-	unsigned int r = b / g;					// num of rounds
+	//unsigned int p = size;				// num of processors
+	//unsigned int g = 2;					// num bits for each pass
+	const unsigned int b		= (1 << g);		// num of buckets (2^g)
+	const unsigned int bpp	= b / p;			// num of buckets per cpu
+	const unsigned int bpp_bc = popcount(bpp - 1);	// number of bits in bpp. used to compute BUCKET_TO_CPU
+	const unsigned int n = arr->size();			// problem size	
 
 	unsigned int mask = ((1 << g) - 1);		// initial mask to get key
 
 
-	vector<vector<int> > buckets(b);  // the buckets
-	vector<int> bin_counts(b);		  // bin counts for each processor
-	vector<int> bin_counts_trans(p);  // bin counts transposed
+	vector<vector<int> > buckets(b);		// the buckets
+	vector<vector<int> > bucket_counts;		// bin counts for each processor
+	for(unsigned int i = 0; i < b; ++i)
+		bucket_counts.push_back(vector<int>(p));
 
-	vector<int> bin_counts_accum(p);  // accumulated values for bin_count. indicates for each process, where the values for this bucket should go
-	vector<int> *this_bucket;
+	vector<int> bucket_counts_aux(b); 		// aux vector, has only bucket counts for this process
 
-	vector<MPI_Request> requests(p);  // request handles for key communication
-	vector<MPI_Status>  status(p);	  // status of key communication recvs
+	vector<vector<int> > bucket_accum;	// accumulated values for bucket_count. indicates for each process, where the values for each bucket should go
+	for(unsigned int i = 0; i < bpp; ++i)
+		bucket_accum.push_back(vector<int>(p));
 
-	for(unsigned int i = 0; i < r; ++i)
-		bin_counts[i] = 0;
+	vector<int> bucket_sizes(bpp);
+	vector<int> *this_bucket;			
+
+
+	// dummy, MPI asks for them
+	MPI_Request request;  // request handles for key communication
+	MPI_Status  status;	  // status of key communication recvs
 
 	for(unsigned int round = 0; mask != 0; mask <<= g, ++round) {
+		// CALCULATE BUCKET COUNTS
 
 		// clear buckets
-		for(unsigned int i = 0; i < bin_counts.size(); ++i) {
-			bin_counts[i] = 0;
+		for(unsigned int i = 0; i < b; ++i) {
+			bucket_counts_aux[i] = 0;
+			bucket_counts[i][id] = 0;
 			buckets[i].clear();
 		}
 
-		// fill buckets and bin_count
+		// fill buckets and bucket_count
 		for(vector<int>::iterator elem = arr->begin(); elem != arr->end(); ++elem) {
 			unsigned int bucket = GET_BUCKET_NUM(*elem, mask, g, round);
-			bin_counts[bucket]++;
+			bucket_counts_aux[bucket]++;
+			bucket_counts[bucket][id]++;
 			buckets[bucket].push_back(*elem);
 		}
 
-		bin_counts_trans[id] = bin_counts[id];
-		// transpose bin_count info
-		MPI_Alltoall(&bin_counts[0], 1, MPI_INT, &bin_counts_trans[0], 1, MPI_INT, MPI_COMM_WORLD);
+		// SEND/RECV BUCKET COUNTS
 
-		// count total size of bucket for this process, and alloc it. also compute bin_counts_accum
-		int total_bucket_size = bin_counts_trans[0];
-		bin_counts_accum[0] = 0;
-		for(unsigned int i = 1; i < bin_counts_trans.size(); ++i) {
-			bin_counts_accum[i] = total_bucket_size;
-			total_bucket_size += bin_counts_trans[i];
+		// sends my bucket counts to all other processes
+		for(unsigned int i = 0; i < p; ++i) {
+			if (i != id)
+				MPI_Isend(&bucket_counts_aux[0], b, MPI_INT, i, TAG_BUCKET_COUNT, MPI_COMM_WORLD, &request);
+		}
+		// recv bucket counts from other processes
+		for(unsigned int i = 0; i < p; ++i) {
+			if (i != id) {
+				MPI_Recv(&bucket_counts_aux[0], b, MPI_INT, i, TAG_BUCKET_COUNT, MPI_COMM_WORLD, &status);
+				// copy from aux array to global matrix
+				for(unsigned int k = 0; k < b; ++k)
+					bucket_counts[k][i] = bucket_counts_aux[k];
+			}
+		}
+
+
+		// CALCULATE BUCKET_ACCUMS
+
+		// count total size of bucket for this process, and alloc it. also compute bucket_accum
+		int total_bucket_size = 0;
+		for(unsigned int i = 0; i < bpp; ++i) {
+			int single_bucket_size = 0;
+			int global_bucket = i + id*bpp;
+
+			for(unsigned int j = 0; j < p; ++j) {
+				bucket_accum[i][j] = total_bucket_size;
+				single_bucket_size += bucket_counts[global_bucket][j];
+				total_bucket_size  += bucket_counts[global_bucket][j];
+			}
+
+			bucket_sizes[i] = single_bucket_size;
 		}
 
 		this_bucket = new vector<int>(total_bucket_size);
@@ -94,21 +145,30 @@ void radix_mpi(vector<int> *&arr, int id, int size) {
 		for(unsigned int i = 0; i < b; ++i) {
 			// send data from a single bucket to its corresponding process
 			if (i != id) {
-				MPI_Isend(&(buckets[i][0]), buckets[i].size(), MPI_INT, i, TAG_KEY_SEND, MPI_COMM_WORLD, &requests[i]);
+				MPI_Isend(&(buckets[i][0]), buckets[i].size(), MPI_INT, BUCKET_TO_CPU(i), BUCKET_IN_CPU(i), MPI_COMM_WORLD, &request);
 			}
 		}
 
 		// recv keys
-		for(unsigned int i = 0; i < p; ++i) {
-			// if its the same process, copy data from buckets[i] to this_bucket
-			if (i == id)
-				memcpy(&(*this_bucket)[ bin_counts_accum[i] ], &(buckets[i][0]), buckets[i].size() * sizeof(int));
+		for(unsigned int b = 0; b < bpp; ++b) {
+			unsigned int global_bucket = b * id*bpp;
 
-			// otherwise recv data from process i
-			else
-				MPI_Recv(&(*this_bucket)[ bin_counts_accum[i] ], bin_counts_trans[i], MPI_INT, i, TAG_KEY_SEND, MPI_COMM_WORLD, &status[i]);
+			for(unsigned int i = 0; i < p; ++i) {
+				if (bucket_counts[global_bucket][i] == 0) {
+					continue;
+				}
+
+				// if its the same process, copy data from buckets[i] to this_bucket
+				else if (i == id) {
+					memcpy(&(*this_bucket)[ bucket_accum[b][i] ], &(buckets[global_bucket][0]), buckets[i].size() * sizeof(int));
+				}
+	
+				// otherwise recv data from process i
+				else {
+					MPI_Recv(&(*this_bucket)[ bucket_accum[b][i] ], bucket_counts[global_bucket][i], MPI_INT, BUCKET_TO_CPU(i), b, MPI_COMM_WORLD, &status);
+				}
+			}
 		}
-
 		delete arr;
 		arr = this_bucket;
 
@@ -184,6 +244,9 @@ void ordered_print(string str, int id, int size) {
 }
 
 int main(int argc, char **argv) {
+	
+	int g = 4;
+
 	int id, size;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &id);
@@ -195,6 +258,9 @@ int main(int argc, char **argv) {
 
 	if (argc > 1)	len = atoi(argv[1]);
 	else			len = LEN;
+
+	if (argc > 2)	g = atoi(argv[1]);
+	else			cout << "defaulting to mask size g=" << g << endl;
 
 	vector<int> *arr = new vector<int>(len / size);
 	// generate test data
@@ -208,7 +274,7 @@ int main(int argc, char **argv) {
 	MPI_Barrier(MPI_COMM_WORLD);
 
 	timer.start();
-	radix_mpi(arr, id, size);
+	radix_mpi(arr, id, size, g);
 	timer.stop();
 
 	MPI_Barrier(MPI_COMM_WORLD);
