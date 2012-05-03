@@ -2,6 +2,7 @@ EXE_SEQ=../bin/sort.seq
 EXE_MPI=../bin/sort.mpi
 RAD_SEQ=../bin/radix.seq
 RAD_MPI=../bin/radix.mpi
+RAD_BAL=../bin/radix.bal.mpi
 EXE_TST=../bin/tests
 
 .PHONY: $(EXE_SEQ) $(EXE_OMP) $(EXE_MPI) $(EXE_TST)
@@ -12,7 +13,7 @@ LIB=-lrt
 
 default: all
 
-all: radix radix.mpi
+all: radix radix.mpi radix.balanced.mpi
 
 tests: test.cpp
 	g++ test.cpp common.cpp -o $(EXE_TST) $(LIB)
@@ -23,6 +24,10 @@ radix: common.o radix.seq.o
 radix.mpi:
 	mpic++ -g radix.mpi.cpp -c
 	mpic++ -g common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+
+radix.balanced.mpi:
+	mpic++ -g radix.balanced.mpi.cpp -c
+	mpic++ -g common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
 
 clean:
 	$(RM) *.o
