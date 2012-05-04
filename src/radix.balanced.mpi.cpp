@@ -30,7 +30,7 @@ enum Tags {
 	TAG_BUCKET_COUNT = 5,
 };
 
-void test_data(vector<int> arr, int id, int size) {
+void test_data(vector<int> &arr, int id, int size) {
 	srand(time(NULL) * (id + 1));
 	for(unsigned int i = 0; i < arr.size(); ++i)
 		arr[i] = rand() % 100;
@@ -92,7 +92,6 @@ void radix_mpi(vector<int> &arr, const int id, const int p, const unsigned int g
 		for(unsigned int buck = 0; buck < arr.size(); ++buck) {
 			int elem = arr[buck];
 			unsigned int bucket = GET_BUCKET_NUM(elem, mask, g, round);
-			cout << bucket << endl;
 			bucket_counts_aux[bucket]++;
 			bucket_counts[bucket][id]++;
 			buckets[bucket].push_back(elem);
@@ -124,38 +123,44 @@ void radix_mpi(vector<int> &arr, const int id, const int p, const unsigned int g
 		for(unsigned int buck = 0; buck < b; ++buck) {
 			for(unsigned int proc = 0; proc < p; ++proc) {
 	
-				if (left == -1) left = arr.size();
+				if (left == -1) left = max;
 
 				unsigned int size = bucket_counts[buck][proc] - off;// number of elems left to copy from this buck/proc
 				if (size > left) { // if there are more elements to copy than those who are left, limit size and adjust off for next copy
 					size = left;
 				}
 				
-				if (size > 0)
-					if (proc == current) {
-						if (id == current)	// if destination is the same as source, then that proc simply copy values
-							memcpy(&(arr[0]), &(buckets[buck][off]), size * sizeof(int));
+				if (size > 0) {
+					if (proc == dest) {	// if destination is the same as source, then that proc simply copy values
+						if (id == dest)	{
+							memcpy(&(arr[current]), &(buckets[buck][off]), size * sizeof(int));
+						}
 					} else {
 						if (id == proc) {			// if its sender
-							MPI_Send(&(buckets[buck][off]), size, MPI_INT, current, TAG_KEY_SEND, MPI_COMM_WORLD);
-						} else if (id == current) {	// if its receiver
-							MPI_Recv(&(arr[0]), 			size, MPI_INT, proc,    TAG_KEY_SEND, MPI_COMM_WORLD, &status);
+							MPI_Isend(&(buckets[buck][off]), size, MPI_INT, dest, TAG_KEY_SEND, MPI_COMM_WORLD, &request);
+						} else if (id == dest) {	// if its receiver
+							MPI_Recv(&(arr[current]), 		size, MPI_INT, proc, TAG_KEY_SEND, MPI_COMM_WORLD, &status);
 						}
 					}
+				}
 
-				off  += size;
-				left -= size;	// subtract size from elements left to copy to this proc
+				current += size;
+				off  	+= size;
+				left 	-= size;	// subtract size from elements left to copy to this proc
 
-				// adjust offset
+				// if no more items left no this proc, move to the next
 				if (left == 0) {
-					current++;
-					left = -1;
+					dest++;
+					current = 0;
+					//cout << "current " << dest  << " buck " << buck << ", proc " << proc << endl;
+					left = max;
 				}
 				
-				if (off != buckets[buck].size()) {
-					off = 0;
-					left = -1;
+				// if it not the end of this buck/proc pair
+				if (off != bucket_counts[buck][proc]) {
 					proc--;
+				} else {
+					off = 0;
 				}
 			}
 		}
