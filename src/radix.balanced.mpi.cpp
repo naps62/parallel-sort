@@ -7,6 +7,7 @@
 #include <vector>
 #include <limits>
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -30,10 +31,12 @@ enum Tags {
 	TAG_BUCKET_COUNT = 5,
 };
 
-void test_data(vector<int> &arr, int id, int size) {
-	srand(time(NULL) * (id + 1));
-	for(unsigned int i = 0; i < arr.size(); ++i)
-		arr[i] = rand();
+void test_data(vector<unsigned int> &arr, int id, int size) {
+	srand(/*time(NULL) **/ 1);
+	for(unsigned int i = arr.size(); i > 0; --i)
+		arr[i-1] = i;
+	//arr[0] = (id == 1) ? 134 : 136;
+	//arr[1] = (id == 1) ? 134 : 136;
 }
 
 // count number of bits set to 1 in a number
@@ -53,7 +56,7 @@ unsigned int popcount(unsigned int x) {
  * \param p   Number of processor (equivalent to MPI_size)
  * \param g   Number of bits to use for each mask (must be power of 2)
  */
-void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, const unsigned int g) {
+void radix_mpi(vector<unsigned int> &arr, const unsigned int id, const unsigned int p, const unsigned int g) {
 
 	const unsigned int b	= (1 << g);			// num of buckets (2^g)
 	unsigned int mask 		= ((1 << g) - 1);	// initial mask to get key
@@ -61,10 +64,11 @@ void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, co
 
 	vector<vector<int> > buckets(b);				// the buckets
 	vector<vector<unsigned int> > bucket_counts;	// bin counts for each processor
+	vector<unsigned int> cena(arr.size());
 	for(unsigned int i = 0; i < b; ++i)
 		bucket_counts.push_back(vector<unsigned int>(p));
 
-	vector<int> bucket_counts_aux(b); 		// aux vector, has only bucket counts for this process
+	vector<unsigned int> bucket_counts_aux(b); 		// aux vector, has only bucket counts for this process
 
 	// dummy, MPI asks for them
 	MPI_Request request;  // request handles for key communication
@@ -82,13 +86,12 @@ void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, co
 
 		// fill buckets and bucket_count
 		for(unsigned int buck = 0; buck < arr.size(); ++buck) {
-			int elem = arr[buck];
+			unsigned int elem = arr[buck];
 			unsigned int bucket = GET_BUCKET_NUM(elem, mask, g, round);
 			bucket_counts_aux[bucket]++;
 			bucket_counts[bucket][id]++;
 			buckets[bucket].push_back(elem);
 		}
-
 		// SEND/RECV BUCKET COUNTS
 
 		// sends my bucket counts to all other processes
@@ -106,30 +109,45 @@ void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, co
 			}
 		}
 
+		for(unsigned int i = 0; i < cena.size(); ++i)
+			cena[i] = 0;
+
+
 		// SEND KEYS
-		unsigned int max		= arr.size();	// max number of elems to copy to each destination
-		unsigned int current	= 0;			// current destination proc
+		unsigned int max	= arr.size();	// max number of elems to copy to each destination
 		unsigned int left	= max;			// how many elements left to send to this proc
 		unsigned int dest	= 0;			// current destination
-		unsigned int off		= 0;			// number of elems already copied from current bucket to the previous proc
+		unsigned int off	= 0;			// number of elems already copied from current bucket to the previous proc
+		unsigned int current= 0;			// current elem offset for this proc
 		for(unsigned int buck = 0; buck < b; ++buck) {
 			for(unsigned int proc = 0; proc < p; ++proc) {
 
-				unsigned int size = bucket_counts[buck][proc] - off;// number of elems left to copy from this buck/proc
-				if (size > left) { // if there are more elements to copy than those who are left, limit size and adjust off for next copy
+				// number of elems left to copy from this buck/proc
+				unsigned int size = bucket_counts[buck][proc] - off;
+				
+				// if there are more elements to copy than those who are left, limit size and adjust off for next copy
+				if (size > left) { 
 					size = left;
 				}
 				
+				if (id == 0)
+					cout << endl << setw(4) << " round " << round << " -  " << size << "  elems from proc " << proc << ", bucket " << buck << ", offset " << off << " to proc " << dest << " at position " << current;
+				
+
 				if (size > 0) {
 					if (proc == dest) {	// if destination is the same as source, then that proc simply copy values
 						if (id == dest)	{
-							memcpy(&(arr[current]), &(buckets[buck][off]), size * sizeof(int));
+							memcpy(&arr[current], &buckets[buck][off], size * sizeof(int));
+							for(unsigned int i = 0; i < size; ++i)
+								cena[i + current]++;
 						}
 					} else {
 						if (id == proc) {			// if its sender
-							MPI_Isend(&(buckets[buck][off]), size, MPI_INT, dest, TAG_KEY_SEND, MPI_COMM_WORLD, &request);
+							MPI_Isend(&buckets[buck][off], size, MPI_INT, dest, TAG_KEY_SEND, MPI_COMM_WORLD, &request);
 						} else if (id == dest) {	// if its receiver
-							MPI_Recv(&(arr[current]), 		size, MPI_INT, proc, TAG_KEY_SEND, MPI_COMM_WORLD, &status);
+							MPI_Recv( &arr[current], 	   size, MPI_INT, proc, TAG_KEY_SEND, MPI_COMM_WORLD, &status);
+							for(unsigned int i = 0; i < size; ++i)
+								cena[i + current]++;
 						}
 					}
 				}
@@ -142,39 +160,40 @@ void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, co
 				if (left == 0) {
 					dest++;
 					current = 0;
-					//cout << "current " << dest  << " buck " << buck << ", proc " << proc << endl;
 					left = max;
 				}
 				
 				// if it not the end of this buck/proc pair
-				if (off != bucket_counts[buck][proc]) {
+				if (off != bucket_counts[buck][proc])
 					proc--;
-				} else {
+				else
 					off = 0;
-				}
 			}
 		}
+
 	}
 }
 
-int check_array_order(vector<int> &arr, unsigned int id, unsigned int size) {
+int check_array_order(vector<unsigned int> &arr, unsigned int id, unsigned int size) {
 
 	// master receives full array
 	if (id == 0) {
 		MPI_Status status;
-		vector<int> full_arr(arr.size() * size);
+		vector<unsigned int> full_arr(arr.size() * size);
 
 		memcpy(&full_arr[0], &arr[0], arr.size() * sizeof(int));
 		for(unsigned int i = 1; i < size; ++i) {
 			MPI_Recv(&full_arr[arr.size() * i], arr.size(), MPI_INT, i, TAG_CHECK_ORDER, MPI_COMM_WORLD, &status);
 		}
 
-		cout << "final result: " << arr_str(full_arr) << endl;
+		//cout << "final result: " << arr_str(full_arr) << endl;
 
+		//cout << arr[5295] << ", " << arr[5296] << ", " << arr[5297] << endl;
 		// check local array order
 		for(unsigned int i = 1; i < full_arr.size(); ++i)
 			if (full_arr[i - 1] > full_arr[i])
 				return i;
+
 
 		return 0;
 
@@ -207,7 +226,7 @@ void ordered_print(char *str, unsigned int id, unsigned int size) {
 
 int main(int argc, char **argv) {
 	
-	int g = 4;
+	unsigned int g = 4;
 
 	char msg[MSG_SIZE];
 	int id, size;
@@ -222,12 +241,12 @@ int main(int argc, char **argv) {
 	if (argc > 1)	len = atoi(argv[1]);
 	else			len = LEN;
 
-	if (argc > 2)	g = atoi(argv[1]);
+	if (argc > 2)	g = atoi(argv[2]);
 
 	if (id == 0) cout << "mask size = " << g << endl << endl;
 
 	// initialize data for this proc
-	vector<int> arr(len / size);
+	vector<unsigned int> arr(len / size);
 	test_data(arr, id, size);
 
 	// the real stuff
@@ -239,6 +258,10 @@ int main(int argc, char **argv) {
 	MPI_Barrier(MPI_COMM_WORLD);
 	if (id == 0) cout << "finished" << endl << endl;
 
+	//if (id == 0) cout << "[" << id << "] " << arr_str(arr) << endl;
+	MPI_Barrier(MPI_COMM_WORLD);
+	//if (id == 1) cout << "[" << id << "] " << arr_str(arr) << endl;
+	MPI_Barrier(MPI_COMM_WORLD);
 	// check array order
 	int order = check_array_order(arr, id, size);
 	switch (order) {

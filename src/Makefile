@@ -9,6 +9,7 @@ EXE_TST=../bin/tests
 
 CC=g++
 LIB=-lrt
+FLAGS=-O3
 
 default: all
 
@@ -21,12 +22,12 @@ radix: common.o radix.seq.o
 	g++ -Wall common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
 radix.mpi:
-	mpic++ -Wall -g radix.mpi.cpp -c
-	mpic++ -Wall -g common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+	mpic++ -Wall $(FLAGS) radix.mpi.cpp -c
+	mpic++ -Wall $(FLAGS) common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
 
 radix.balanced.mpi:
-	mpic++ -Wall -g radix.balanced.mpi.cpp -c
-	mpic++ -Wall -g common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
+	mpic++ -Wall $(FLAGS) radix.balanced.mpi.cpp -c
+	mpic++ -Wall $(FLAGS) common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
 
 clean:
 	$(RM) *.o

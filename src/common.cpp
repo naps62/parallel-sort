@@ -25,14 +25,14 @@ long Timer::get() {
 	return (t_end.tv_sec - t_start.tv_sec) * 1e9 + (t_end.tv_nsec - t_start.tv_nsec);
 }
 
-void dump_arr(vector<int> arr) {
+void dump_arr(vector<unsigned int> arr) {
 	cout << "[" << arr[0];
 	for(unsigned int i = 1; i < arr.size(); ++i)
 		cout << ", " << arr[i];
 	cout << "]" << endl;
 }
 
-string arr_str(vector<int> arr) {
+string arr_str(vector<unsigned int> arr) {
 	stringstream ss;
 	ss << "[" << arr[0];
 	for(unsigned int i = 1; i < arr.size(); ++i)
@@ -42,14 +42,14 @@ string arr_str(vector<int> arr) {
 	return ss.str();
 }
 
-int check_array_order(vector<int> arr) {
+int check_array_order(vector<unsigned int> arr) {
 	for(unsigned int i = 1; i < arr.size(); ++i)
 		if (arr[i-1] > arr[i])
 			return i;
 	return 0;
 }
 
-vector<int> get_test_array(int n) {
+vector<int> get_test_array(unsigned int n) {
 	srand(time(NULL));
 	while(n-- > 0) {
 		def_arr.push_back(rand() % 100000);

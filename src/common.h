@@ -32,8 +32,8 @@ class Timer {
 //
 #define LEN 10
 
-void dump_arr(vector<int> arr);
-string arr_str(vector<int> arr);
-vector<int> get_test_array(int n = LEN);
+void dump_arr(vector<unsigned int> arr);
+string arr_str(vector<unsigned int> arr);
+vector<int> get_test_array(unsigned int n = LEN);
 
 #endif // _H_COMMON_

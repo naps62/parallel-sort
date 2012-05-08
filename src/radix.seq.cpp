@@ -6,15 +6,15 @@
 #include <vector>
 #include <iostream>
 #include <stdlib.h>
+#include <iomanip>
 using namespace std;
 
 extern vector<int> def_arr;
 
-void radix(vector<int> &arr) {
+void radix(vector<int> &arr, unsigned int g) {
 
 	unsigned int p = 1;					 // num of processors
 	unsigned int n = arr.size();		 // problem size
-	unsigned int g = 4; 				 // num bits for each pass
 	unsigned int num_buckets = (1 << g); // num of buckets (2^g)
 	unsigned int mask = ((1 << g) - 1);	 // initial mask to get key
 
@@ -23,6 +23,7 @@ void radix(vector<int> &arr) {
 
 	// begin radix sort
 	for(unsigned int i = 0; mask != 0; mask <<= g, ++i) {
+		cout << setw(8) << hex << mask << endl;
 
 		// determine which bucket each element should enter
 		for(vector<int>::iterator elem = arr.begin(); elem != arr.end(); ++elem) {
@@ -60,15 +61,19 @@ int main(int argc, char **argv) {
 
 	Timer timer;
 	int len;
+	unsigned int g;
 
 	if (argc > 1)	len = atoi(argv[1]);
 	else			len = LEN;
+
+	if (argc > 2)   g = atoi(argv[2]);
+	else			g = 4;
 
 	vector<int> arr = get_test_array(len);
 	cout << "starting test with array of size " << arr.size() << endl;
 
 	timer.start();
-	radix(arr);
+	radix(arr, g);
 	timer.stop();
 
 	int order = check_array_order(arr);
