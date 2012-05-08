@@ -7,6 +7,7 @@
 #include <vector>
 #include <limits>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <sstream>
 #include <mpi.h>
@@ -14,7 +15,6 @@ using namespace std;
 
 
 // given a key and a mask, calcs the bucket to where the key belongs
-#define GET_BUCKET_NUM(elem, mask, g, i) (((elem) & (mask)) >> ((g) * (i)))
 
 enum OrderCodes {
 	ORDER_CORRECT = 0,
@@ -33,7 +33,7 @@ enum Tags {
 void test_data(vector<int> &arr, int id, int size) {
 	srand(time(NULL) * (id + 1));
 	for(unsigned int i = 0; i < arr.size(); ++i)
-		arr[i] = rand() % 100;
+		arr[i] = rand();
 }
 
 // count number of bits set to 1 in a number
@@ -43,9 +43,7 @@ unsigned int popcount(unsigned int x) {
 	return c;
 }
 
-// maps a given bucket to a cpu, given max number of buckets per cpu
-#define BUCKET_TO_CPU(bucket)		(((bucket) & (~((bpp) - 1))) >> bpp_bc)
-#define BUCKET_IN_CPU(bucket)       ( (bucket) & (  (bpp) - 1)            )
+#define GET_BUCKET_NUM(elem, mask, g, i) (((elem) & (mask)) >> ((g) * (i)))
 
 /**
  * it is assumed that B = P, only one bucket per processor
@@ -55,22 +53,16 @@ unsigned int popcount(unsigned int x) {
  * \param p   Number of processor (equivalent to MPI_size)
  * \param g   Number of bits to use for each mask (must be power of 2)
  */
-void radix_mpi(vector<int> &arr, const int id, const int p, const unsigned int g) {
+void radix_mpi(vector<int> &arr, const unsigned int id, const unsigned int p, const unsigned int g) {
 
-	//unsigned int p = size;				// num of processors
-	//unsigned int g = 2;					// num bits for each pass
-	const unsigned int b		= (1 << g);		// num of buckets (2^g)
-	const unsigned int bpp	= b / p;			// num of buckets per cpu
-	const unsigned int bpp_bc = popcount(bpp - 1);	// number of bits in bpp. used to compute BUCKET_TO_CPU
-	const unsigned int n = arr.size();			// problem size	
-
-	unsigned int mask = ((1 << g) - 1);		// initial mask to get key
+	const unsigned int b	= (1 << g);			// num of buckets (2^g)
+	unsigned int mask 		= ((1 << g) - 1);	// initial mask to get key
 
 
-	vector<vector<int> > buckets(b);		// the buckets
-	vector<vector<int> > bucket_counts;		// bin counts for each processor
+	vector<vector<int> > buckets(b);				// the buckets
+	vector<vector<unsigned int> > bucket_counts;	// bin counts for each processor
 	for(unsigned int i = 0; i < b; ++i)
-		bucket_counts.push_back(vector<int>(p));
+		bucket_counts.push_back(vector<unsigned int>(p));
 
 	vector<int> bucket_counts_aux(b); 		// aux vector, has only bucket counts for this process
 
@@ -115,15 +107,13 @@ void radix_mpi(vector<int> &arr, const int id, const int p, const unsigned int g
 		}
 
 		// SEND KEYS
-		int max		= arr.size();	// max number of elems to copy to each destination
-		int current	= 0;			// current destination proc
-		int left	= max;			// how many elements left to send to this proc
-		int dest	= 0;			// current destination
-		int off		= 0;			// number of elems already copied from current bucket to the previous proc
+		unsigned int max		= arr.size();	// max number of elems to copy to each destination
+		unsigned int current	= 0;			// current destination proc
+		unsigned int left	= max;			// how many elements left to send to this proc
+		unsigned int dest	= 0;			// current destination
+		unsigned int off		= 0;			// number of elems already copied from current bucket to the previous proc
 		for(unsigned int buck = 0; buck < b; ++buck) {
 			for(unsigned int proc = 0; proc < p; ++proc) {
-	
-				if (left == -1) left = max;
 
 				unsigned int size = bucket_counts[buck][proc] - off;// number of elems left to copy from this buck/proc
 				if (size > left) { // if there are more elements to copy than those who are left, limit size and adjust off for next copy
@@ -167,71 +157,51 @@ void radix_mpi(vector<int> &arr, const int id, const int p, const unsigned int g
 	}
 }
 
-int check_array_order(vector<int> &arr, int id, int size) {
+int check_array_order(vector<int> &arr, unsigned int id, unsigned int size) {
 
-	// check local array order
-	for(unsigned int i = 1; i < arr.size(); ++i)
-		if (arr[i - 1] > arr[i])
-			return i;
-
-	int is_ordered = 1, reduce_val;
-	int next_val;
-	MPI_Request request;
-	MPI_Status status;
-
-	// all processes but first send first element to previous process
-	if (id > 0) {
-		// if local array is size 0, send max_int
-		int val_to_send = (arr.size() == 0) ? numeric_limits<int>::max() : arr[0];
-		MPI_Isend(&val_to_send, 1, MPI_INT, id - 1, TAG_CHECK_ORDER, MPI_COMM_WORLD, &request);
-	}
-
-	// all processes but last receive element from next process and compare it to their last one
-	if (id < size - 1) {
-		MPI_Recv(&next_val, 1, MPI_INT, id + 1, TAG_CHECK_ORDER, MPI_COMM_WORLD, &status);
-
-		// this link is ordered if last local value is <= than received value, or if local size is 0
-		is_ordered = (arr.size() == 0 || arr.back() <= next_val);
-	}
-
-	// reduce all values, to check if border order is met
-	MPI_Reduce(&is_ordered, &reduce_val, 1, MPI_INT, MPI_LAND, 0, MPI_COMM_WORLD);
-
-	// reduce result only goes to process 0
-	if (id == 0) {
-		if (reduce_val)
-			return ORDER_CORRECT;
-		else
-			return ORDER_ERROR_BORDERS;
-	}
-
-	return ORDER_ONLY_MASTER;
-}
-
-void ordered_print(string str, int id, int size) {
-	int buff_size;
-	// if master, receive data and print it
+	// master receives full array
 	if (id == 0) {
 		MPI_Status status;
-		char *buff;
-		for(unsigned int i = 0; i < size; ++i) {
-			if (i != id) {
-				MPI_Recv(&buff_size, 1, MPI_INT, i, TAG_COUT_SIZE, MPI_COMM_WORLD, &status);
-				buff = new char[buff_size+1];
-				buff[buff_size] = '\0';
-				MPI_Recv(&buff, buff_size, MPI_BYTE, i, TAG_COUT_DATA, MPI_COMM_WORLD, &status);
-				cout << buff;
-			} else {
-				cout << str;
-			}
+		vector<int> full_arr(arr.size() * size);
+
+		memcpy(&full_arr[0], &arr[0], arr.size() * sizeof(int));
+		for(unsigned int i = 1; i < size; ++i) {
+			MPI_Recv(&full_arr[arr.size() * i], arr.size(), MPI_INT, i, TAG_CHECK_ORDER, MPI_COMM_WORLD, &status);
+		}
+
+		cout << "final result: " << arr_str(full_arr) << endl;
+
+		// check local array order
+		for(unsigned int i = 1; i < full_arr.size(); ++i)
+			if (full_arr[i - 1] > full_arr[i])
+				return i;
+
+		return 0;
+
+	// others only send their array to master
+	} else {
+		MPI_Send(&arr[0], arr.size(), MPI_INT, 0, TAG_CHECK_ORDER, MPI_COMM_WORLD);
+		return ORDER_ONLY_MASTER;
+	}
+}
+
+#define MSG_SIZE 100
+
+void ordered_print(char *str, unsigned int id, unsigned int size) {
+	// if master, receive data and print it
+	if (id == 0) {
+		cout << str;
+		MPI_Status status;
+		for(unsigned int i = 1; i < size; ++i) {
+			char buff[MSG_SIZE];
+			MPI_Recv(buff, MSG_SIZE, MPI_BYTE, i, TAG_COUT_DATA, MPI_COMM_WORLD, &status);
+			cout << buff;
 		}
 	}
 
 	// else send it to master
 	else {
-		buff_size = str.size();
-		MPI_Send(&buff_size,  1,          MPI_INT,  0, TAG_COUT_SIZE, MPI_COMM_WORLD);
-		MPI_Send(&buff_size, str.size(), MPI_BYTE, 0, TAG_COUT_DATA, MPI_COMM_WORLD);
+		MPI_Send(str, MSG_SIZE, MPI_BYTE, 0, TAG_COUT_DATA, MPI_COMM_WORLD);
 	}
 }
 
@@ -239,6 +209,7 @@ int main(int argc, char **argv) {
 	
 	int g = 4;
 
+	char msg[MSG_SIZE];
 	int id, size;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &id);
@@ -252,56 +223,32 @@ int main(int argc, char **argv) {
 	else			len = LEN;
 
 	if (argc > 2)	g = atoi(argv[1]);
-	else			cout << "defaulting to mask size g=" << g << endl;
 
-	vector<int> arr(len / size);// = new vector<int>(len / size);
-	// generate test data
+	if (id == 0) cout << "mask size = " << g << endl << endl;
+
+	// initialize data for this proc
+	vector<int> arr(len / size);
 	test_data(arr, id, size);
 
-	ss << "[" << id << "] initial array: " << " " << arr_str(arr) << endl;
-	//ordered_print(ss.str(), id, size);
-	cout << ss.str();
-	ss.str("");
-
+	// the real stuff
+	if (id == 0) cout << "starting radix sort...";
 	MPI_Barrier(MPI_COMM_WORLD);
-
 	timer.start();
 	radix_mpi(arr, id, size, g);
 	timer.stop();
-
 	MPI_Barrier(MPI_COMM_WORLD);
+	if (id == 0) cout << "finished" << endl << endl;
 
-	ss << "[" << id << "]";
-	if (arr.size() > 0)
-		ss << arr_str(arr) << endl;
-	//ordered_print(ss.str(), id, size);
-	cout << ss.str();
-	ss.str("");
-
-	MPI_Barrier(MPI_COMM_WORLD);
-
-	/*int order = check_array_order(arr, id, size);
-	int order = ORDER_CORRECT;
-
+	// check array order
+	int order = check_array_order(arr, id, size);
 	switch (order) {
-		case ORDER_CORRECT:
-			cout << "[" << id << "] CORRECT! Result is ordered" << endl;
-			break;
-		case ORDER_ERROR_BORDERS:
-			cout << "WRONG IN BORDERS!" << endl;
-			break;
-		case ORDER_ONLY_MASTER:
-			break;
-		default:
-			cout << "[" << id << "] WRONG! Order fails at index " << order << endl;
-			break;
+		case ORDER_CORRECT: 	cout << "CORRECT! Result is ordered" << endl; break;
+		case ORDER_ONLY_MASTER: break;
+		default: 				cout << "WRONG! Order fails at index " << order << endl; break;
 	}
-	cout << id << endl;
-	MPI_Barrier(MPI_COMM_WORLD);*/
 
-	ss << "id: " << id << " - solution took: " << timer.get() * 1.0e-3 << " usec" << endl;
-	//ordered_print(ss.str(), id, size);
-	cout << ss.str();
-
+	// print time for each process
+	sprintf(msg, "%d: %lf usec\n", id, timer.get() * 1.0e-3);
+	ordered_print(msg, id, size);
 	MPI_Finalize();
 }

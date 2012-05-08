@@ -55,14 +55,13 @@ unsigned int popcount(unsigned int x) {
  * \param p   Number of processor (equivalent to MPI_size)
  * \param g   Number of bits to use for each mask (must be power of 2)
  */
-void radix_mpi(vector<int> *&arr, const int id, const int p, const unsigned int g) {
+void radix_mpi(vector<int> *&arr, const unsigned int id, const unsigned int p, const unsigned int g) {
 
 	//unsigned int p = size;				// num of processors
 	//unsigned int g = 2;					// num bits for each pass
 	const unsigned int b		= (1 << g);		// num of buckets (2^g)
 	const unsigned int bpp	= b / p;			// num of buckets per cpu
 	const unsigned int bpp_bc = popcount(bpp - 1);	// number of bits in bpp. used to compute BUCKET_TO_CPU
-	const unsigned int n = arr->size();			// problem size	
 
 	unsigned int mask = ((1 << g) - 1);		// initial mask to get key
 
@@ -219,7 +218,7 @@ int check_array_order(vector<int> *&arr, int id, int size) {
 	return ORDER_ONLY_MASTER;
 }
 
-void ordered_print(string str, int id, int size) {
+void ordered_print(string str, unsigned int id, unsigned int size) {
 	int buff_size;
 	// if master, receive data and print it
 	if (id == 0) {

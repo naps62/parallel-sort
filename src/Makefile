@@ -8,7 +8,6 @@ EXE_TST=../bin/tests
 .PHONY: $(EXE_SEQ) $(EXE_OMP) $(EXE_MPI) $(EXE_TST)
 
 CC=g++
-CXXFLAGS=-g
 LIB=-lrt
 
 default: all
@@ -16,18 +15,18 @@ default: all
 all: radix radix.mpi radix.balanced.mpi
 
 tests: test.cpp
-	g++ test.cpp common.cpp -o $(EXE_TST) $(LIB)
+	g++ -Wall test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
 radix: common.o radix.seq.o
-	g++ common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
+	g++ -Wall common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
 radix.mpi:
-	mpic++ -g radix.mpi.cpp -c
-	mpic++ -g common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+	mpic++ -Wall -g radix.mpi.cpp -c
+	mpic++ -Wall -g common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
 
 radix.balanced.mpi:
-	mpic++ -g radix.balanced.mpi.cpp -c
-	mpic++ -g common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
+	mpic++ -Wall -g radix.balanced.mpi.cpp -c
+	mpic++ -Wall -g common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
 
 clean:
 	$(RM) *.o
