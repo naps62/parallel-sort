@@ -1,6 +1,7 @@
 EXE_SEQ=../bin/sort.seq
 EXE_MPI=../bin/sort.mpi
 RAD_SEQ=../bin/radix.seq
+RAD_OMP=../bin/radix.omp
 RAD_MPI=../bin/radix.mpi
 RAD_BAL=../bin/radix.bal.mpi
 EXE_TST=../bin/tests
@@ -13,13 +14,16 @@ FLAGS=-O3
 
 default: all
 
-all: radix radix.mpi radix.balanced.mpi
+all: radix radix.mpi radix.omp radix.balanced.mpi
 
 tests: test.cpp
 	g++ -Wall test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
 radix: common.o radix.seq.o
 	g++ -Wall common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
+
+radix.omp: common.o radix.omp.o
+	g++ -Wall $(FLAGS) common.o radix.omp.o -o $(RAD_OMP) $(LIB) -fopenmp
 
 radix.mpi:
 	mpic++ -Wall $(FLAGS) radix.mpi.cpp -c
