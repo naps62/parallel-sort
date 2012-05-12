@@ -5,6 +5,7 @@
 #include "common.h"
 #include <time.h>
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <stdlib.h>
 #include <string>
@@ -68,3 +69,15 @@ vector<int> get_test_array(unsigned int n) {
 
 	return def_arr;
 }
+
+void read_arr(vector<unsigned int> &arr, unsigned int start) {
+	fstream file;
+	file.open("input");
+	unsigned int dummy;
+	for(unsigned int i = 0; i < start; ++i)
+		file >> dummy;
+
+	for(unsigned int i = 0; i < arr.size(); ++i)
+		file >> arr[i];
+}
+

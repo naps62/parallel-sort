@@ -35,5 +35,6 @@ class Timer {
 void dump_arr(vector<unsigned int> arr);
 string arr_str(vector<unsigned int> arr);
 vector<int> get_test_array(unsigned int n = LEN);
+void read_arr(vector<unsigned int> &arr, unsigned int start);
 
 #endif // _H_COMMON_

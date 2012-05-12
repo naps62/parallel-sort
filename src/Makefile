@@ -10,28 +10,35 @@ EXE_TST=../bin/tests
 
 CC=g++
 LIB=-lrt
-FLAGS=-O3
+CFLAGS= -Wall -O3
 
 default: all
 
-all: radix radix.mpi radix.omp radix.balanced.mpi
+all: radix radix.mpi radix.omp radix.balanced.mpi gen
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< -o $@
+
+gen:
+	g++ $(CFLAGS) gen.cpp -o ../bin/gen
 
 tests: test.cpp
-	g++ -Wall test.cpp common.cpp -o $(EXE_TST) $(LIB)
+	g++ $(CFLAGS) test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
 radix: common.o radix.seq.o
-	g++ -Wall common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
+	g++ common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
-radix.omp: common.o radix.omp.o
-	g++ -Wall $(FLAGS) common.o radix.omp.o -o $(RAD_OMP) $(LIB) -fopenmp
+radix.omp: common.o
+	g++ $(CFLAGS) -c radix.omp.cpp -fopenmp
+	g++ $(CFLAGS) common.o radix.omp.o -o $(RAD_OMP) $(LIB) -fopenmp
 
 radix.mpi:
-	mpic++ -Wall $(FLAGS) radix.mpi.cpp -c
-	mpic++ -Wall $(FLAGS) common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
+	mpic++ $(CFLAGS) radix.mpi.cpp -c
+	mpic++ $(CFLAGS) common.o radix.mpi.o -o $(RAD_MPI) $(LIB)
 
 radix.balanced.mpi:
-	mpic++ -Wall $(FLAGS) radix.balanced.mpi.cpp -c
-	mpic++ -Wall $(FLAGS) common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
+	mpic++ $(CFLAGS) radix.balanced.mpi.cpp -c
+	mpic++ $(CFLAGS) common.o radix.balanced.mpi.o -o $(RAD_BAL) $(LIB)
 
 clean:
 	$(RM) *.o

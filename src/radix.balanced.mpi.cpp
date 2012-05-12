@@ -130,10 +130,6 @@ void radix_mpi(vector<unsigned int> &arr, const unsigned int id, const unsigned 
 					size = left;
 				}
 				
-				if (id == 0)
-					cout << endl << setw(4) << " round " << round << " -  " << size << "  elems from proc " << proc << ", bucket " << buck << ", offset " << off << " to proc " << dest << " at position " << current;
-				
-
 				if (size > 0) {
 					if (proc == dest) {	// if destination is the same as source, then that proc simply copy values
 						if (id == dest)	{
@@ -243,35 +239,32 @@ int main(int argc, char **argv) {
 
 	if (argc > 2)	g = atoi(argv[2]);
 
-	if (id == 0) cout << "mask size = " << g << endl << endl;
+	if (id == 0) cerr << "mask size = " << g << endl << endl;
 
 	// initialize data for this proc
 	vector<unsigned int> arr(len / size);
-	test_data(arr, id, size);
+	read_arr(arr, id*len);
 
 	// the real stuff
-	if (id == 0) cout << "starting radix sort...";
+	if (id == 0) cerr << "starting radix sort...";
 	MPI_Barrier(MPI_COMM_WORLD);
 	timer.start();
 	radix_mpi(arr, id, size, g);
 	timer.stop();
 	MPI_Barrier(MPI_COMM_WORLD);
-	if (id == 0) cout << "finished" << endl << endl;
+	if (id == 0) cerr << "finished" << endl << endl;
 
-	//if (id == 0) cout << "[" << id << "] " << arr_str(arr) << endl;
-	MPI_Barrier(MPI_COMM_WORLD);
-	//if (id == 1) cout << "[" << id << "] " << arr_str(arr) << endl;
 	MPI_Barrier(MPI_COMM_WORLD);
 	// check array order
 	int order = check_array_order(arr, id, size);
 	switch (order) {
-		case ORDER_CORRECT: 	cout << "CORRECT! Result is ordered" << endl; break;
+		case ORDER_CORRECT: 	cerr << "CORRECT! Result is ordered" << endl; break;
 		case ORDER_ONLY_MASTER: break;
-		default: 				cout << "WRONG! Order fails at index " << order << endl; break;
+		default: 				cerr << "WRONG! Order fails at index " << order << endl; break;
 	}
 
 	// print time for each process
-	sprintf(msg, "%d: %lf usec\n", id, timer.get() * 1.0e-3);
+	sprintf(msg, "%lf, ", timer.get() * 1.0e-3);
 	ordered_print(msg, id, size);
 	MPI_Finalize();
 }

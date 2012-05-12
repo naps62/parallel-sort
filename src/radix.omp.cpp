@@ -30,10 +30,15 @@ enum Tags {
 	TAG_BUCKET_COUNT = 5,
 };
 
-void test_data(vector<unsigned int> arr) {
+void test_data(vector<unsigned int> &arr) {
 	srand(time(NULL));
 	for(unsigned int i = 0; i < arr.size(); ++i)
-		arr[i] = rand() % 1000;
+		arr[i] = rand();
+
+	arr[0] = 7;
+	arr[1] = 5;
+	arr[2] = 3;
+	arr[3] = 2;
 }
 
 // count number of bits set to 1 in a number
@@ -58,21 +63,19 @@ unsigned int popcount(unsigned int x) {
 void radix_omp(vector<unsigned int> &arr, const unsigned int num_threads, const unsigned int g) {
 
 	const unsigned int b	= (1 << g);				// num of buckets (2^g)
-	const unsigned int bpp	= b / num_threads;		// num of buckets per thread
+	unsigned int bpp		= b / num_threads;		// num of buckets per thread
 	const unsigned int bpp_bc = popcount(bpp - 1);	// number of bits in bpp. used to compute BUCKET_TO_CPU
 
-	unsigned int mask = ((1 << g) - 1);		// initial mask to get key
 
 
-	vector<vector<unsigned int> > buckets(b);		// the buckets
-	vector<unsigned int> bucket_accum;	// accumulated values for bucket_count. indicates where the values for each bucket should go
+	vector<vector<unsigned int> > buckets(b);	// the buckets
+	vector<unsigned int> bucket_accum(b);		// accumulated values for bucket_count. indicates where the values for each bucket should go
 	bucket_accum[0] = 0;
 
-	omp_set_num_threads(num_threads);
-
-	#pragma omp parallel
+	#pragma omp parallel num_threads(num_threads)
 	{
-		int thread_num = omp_get_thread_num();
+			unsigned int thread_num = omp_get_thread_num();
+		unsigned int mask = ((1 << g) - 1);		// initial mask to get key
 
 		for(unsigned int round = 0; mask != 0; mask <<= g, ++round) {
 
@@ -86,9 +89,16 @@ void radix_omp(vector<unsigned int> &arr, const unsigned int num_threads, const 
 				unsigned int elem = arr[i];
 				unsigned int bucket = GET_BUCKET_NUM(elem, mask, g, round);
 
+				//if (round == 0)
+				//	cout << elem << " goes to bucket " << bucket << " by thread " << BUCKET_TO_CPU(bucket) << endl;
+
 				// if this bucket is handled by this thread, insert
-				if (BUCKET_TO_CPU(bucket) == thread_num)
+				//if (round == 0) cout << "attempting " << BUCKET_TO_CPU(bucket) << " with " << thread_num << endl;
+				if (BUCKET_TO_CPU(bucket) == thread_num) {
+					//if (round == 0)
+						//cout << "inserting " << elem << " into bucket " << bucket << endl;
 					buckets[bucket].push_back(elem);
+				}
 			}
 
 			#pragma omp barrier
@@ -96,8 +106,10 @@ void radix_omp(vector<unsigned int> &arr, const unsigned int num_threads, const 
 			#pragma omp master
 			{
 				unsigned int sum = buckets[0].size();
+				//cout << round << " bucket[0] = " << sum << endl;
 				for(unsigned int i = 1; i < b; ++i) {
 					bucket_accum[i] = sum;
+					//cout << round << " bucket[" << i << "] = " << buckets[i].size() << endl;
 					sum += buckets[i].size();
 				}
 			}
@@ -115,7 +127,9 @@ void radix_omp(vector<unsigned int> &arr, const unsigned int num_threads, const 
 
 			#pragma omp barrier
 		}
+
 	}
+
 }
 
 int check_array_order(vector<unsigned int> &arr) {
@@ -145,13 +159,15 @@ int main(int argc, char **argv) {
 	else			size = 4;
 
 	cerr
-		<< "array len   = " << size << endl
+		<< "array len   = " << len << endl
 		<< "g           = "	<< g << endl
 		<< "num_threads = " << size << endl;
 
 	vector<unsigned int> arr(len);
 	// generate test data
-	test_data(arr);
+	read_arr(arr, 0);
+
+	//cerr << "initial data: " << arr_str(arr) << endl;
 
 	// the real stuff
 	cerr << "starting radix sort...";
@@ -160,7 +176,7 @@ int main(int argc, char **argv) {
 	timer.stop();
 	cerr << "finished" << endl << endl;
 
-	cerr << arr_str(arr) << endl;
+	//cerr << arr_str(arr) << endl;
 	// check array order
 	int order = check_array_order(arr);
 	switch (order) {
@@ -169,5 +185,5 @@ int main(int argc, char **argv) {
 	}
 
 	// print time for each process
-	cout << timer.get() * 1.0e-3 << " usec" << endl;
+	cout << timer.get() * 1.0e-3 << endl;
 }

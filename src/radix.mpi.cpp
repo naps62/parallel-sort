@@ -256,34 +256,32 @@ int main(int argc, char **argv) {
 
 	if (argc > 2)	g = atoi(argv[2]);
 
-	if (id == 0) cout << "mask size = " << g << endl << endl;
+	if (id == 0) cerr << "mask size = " << g << endl << endl;
 
 	vector<unsigned int> *arr = new vector<unsigned int>(len / size);
 	// generate test data
-	test_data(arr, id, size);
+	read_arr(*arr, len*id);
 
 	// the real stuff
-	if (id == 0) cout << "starting radix sort...";
+	if (id == 0) cerr << "starting radix sort...";
 	MPI_Barrier(MPI_COMM_WORLD);
 	timer.start();
 	radix_mpi(arr, id, size, g);
 	timer.stop();
 	MPI_Barrier(MPI_COMM_WORLD);
-	if (id == 0) cout << "finished" << endl << endl;
+	if (id == 0) cerr << "finished" << endl << endl;
 
-	if (id == 0 && arr->size() > 0) cout << "[" << id << "] " << arr_str(*arr) << endl;
 	MPI_Barrier(MPI_COMM_WORLD);
-	if (id == 1 && arr->size() > 0) cout << "[" << id << "] " << arr_str(*arr) << endl;
 	// check array order
 	int order = ORDER_CORRECT;//check_array_order(arr, id, size);
 	switch (order) {
-		case ORDER_CORRECT: 	cout << "CORRECT! Result is ordered" << endl; break;
+		case ORDER_CORRECT: 	cerr << "CORRECT! Result is ordered" << endl; break;
 		case ORDER_ONLY_MASTER: break;
-		default: 				cout << "WRONG! Order fails at index " << order << endl; break;
+		default: 				cerr << "WRONG! Order fails at index " << order << endl; break;
 	}
 
 	// print time for each process
-	sprintf(msg, "%d: %lf usec\n", id, timer.get() * 1.0e-3);
+	sprintf(msg, "%lf, ", timer.get() * 1.0e-3);
 	ordered_print(msg, id, size);
 	MPI_Finalize();
 }
