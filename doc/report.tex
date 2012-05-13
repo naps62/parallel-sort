@@ -1,0 +1,86 @@
+\documentclass[abstract=on,9pt,twocolumn]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[paper=a4paper,top=2cm,left=1.5cm,right=1.5cm,bottom=2cm,foot=1cm]{geometry}
+\usepackage{relsize}%	relative font sizes
+\usepackage[retainorgcmds]{IEEEtrantools}%	IEEEeqnarray
+\setlength{\IEEEnormaljot}{4\IEEEnormaljot}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+%\usepackage{cleveref}
+%\usepackage[noabbrev]{cleveref}
+\usepackage{listings}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%
+%  title page  %
+%%%%%%%%%%%%%%%%
+
+\titlehead{University of Minho \hfill Master's Degree in Informatics Engineering\\	Department of Informatics \hfill Parallel and Distributed Computing}
+\title{Parallel Radix Sort}
+\subtitle{OpenMP and MPI analysis and comparison}
+\author{Miguel Palhas \hfill--- \texttt{\smaller pg19808@alunos.uminho.pt}}
+\date{Braga, May 2012}
+\subject{Parallel Computing Paradigms}
+
+
+%%%%%%%%%%%
+%  Hacks  %
+%%%%%%%%%%%
+
+%	Paragraph (title) with linebreak
+\newcommand{\paragraphh}[1]{\paragraph{#1\hfill}\hfill
+
+}
+
+\begin{document}
+	\maketitle
+
+	\include{report_files/0_abstract.tex}	% Abstract
+	\include{report_files/1_intro.tex}		% Introduction
+	% TODO add stuff here
+	\include{report_files/2_conclusion.tex}	% Conclusion
+
+	\bibliographystyle{IEEE}
+%\begin{thebibliography}{12345}
+%
+%%\bibitem[FVM]{finite}
+%%	Joaquim Peiró and Spencer Sherwin	\\
+%%	\textit{Finite Difference, Finite Element and Finite Volume Methods for Partial Differential Equations}	\\
+%%	Department of Aeronautics, Imperial College, London, UK	\\
+%%	\texttt{\smaller http://multiscale.emsl.pnl.gov/docs/finite.pdf}
+%
+%\bibitem[OMP]{openmp}
+%	\textit{OpenMP Application Program Interface}	\\
+%	OpenMP Architecture Review Board	\\
+%	Version 3.1, July 2011
+%
+%\bibitem[NVIDIA]{nvidia}
+%	\hfill\\
+%	\texttt{\smaller http://developer.nvidia.com/category/zone/cuda-zone}
+%	
+%\bibitem[AMD6100]{AMD6100}
+%	\textit{The AMD Opteron™ processor is the ideal solution for High Performance Computing}\\
+%	AMD Documents\\
+%	\texttt{\smaller http://sites.amd.com/us/Documents/\\AMD\_Opteron\_ideal\_for\_HPC.pdf}
+%
+%% TODO corrigir este
+%\bibitem[CUDA By Example]{cudabook}
+%	Jason Sanders, Edward Kandrot	\\
+%	\textit{CUDA By Example: An Introduction to General-Purpose GPU Programming}
+%
+%\bibitem[CUDA Profiler]{profiler}
+%	\hfill\\
+%	\texttt{\smaller http://developer.download.nvidia.com/compute/cuda/3\_0\\/toolkit/docs/visual\_profiler\_cuda/CUDA\_Profiler\_3.0.txt}
+%
+%\bibitem[CUDA Occupancy Calculator]{calculator}
+%	\hfill\\
+%	\texttt{http://developer.download.nvidia.com\\/compute/cuda/CUDA\_Occupancy\_calculator.xls}
+%\end{thebibliography}
+
+\end{document}

@@ -18,3 +18,10 @@ bin/
 input
 results/
 out/
+
+# latex
+doc/*.aux
+doc/*.log
+doc/*.out
+doc/*.pdf
+doc/*.toc
