@@ -1,0 +1,31 @@
+\section{The Algorithm}
+\label{sec:radix}
+
+Radix Sort is a non-comparative sorting algorithm that works on integer or string keys. The ordering is done by grouping keys into buckets, according to their individual digits.\\
+
+There are two variants of the algorithm. The \emph{Least Significant Digit Radix Sort} which starts by grouping keys based on their least significant digit. After each key is sent to their respective bucket, the buckets are concatenated orderly. At this point the keys will be ordered up to the digit upon which the step was made. After iterating through all the digits, the keys are ordered. The \emph{Most Significant Digit Radix Sort} uses a different approach, and is recursive in nature. Starting on the most significant digit, keys are grouped to their buckets. However, instead of merging all buckets after this step, a recursive step is taken, ordering each bucket internally based on the next digit.\\
+
+This report will focus only on the first version, since it's an iterative, simple method, instead of a recursive one, and because of that, it's parallelization is not only easier to implement, but probably allows for better load balance.\\
+
+
+\subsection{How it works}
+\label{subsec:how_it_works}
+
+Consider the following list of integers:
+
+\begin{IEEEeqnarray*}{C}
+	[170, 45, 75, 90, 802, 24, 2, 66]
+\end{IEEEeqnarray*}
+
+In the first iteration, the least significant digit is considered. After sending each key into the correct bucket, the result is the following:
+
+\begin{IEEEeqnarray*}{C}
+	0: [170, 90],	\\
+	2: [2], 4: [24]	\\
+	5: [45, 75]		\\
+	6: [66]
+\end{IEEEeqnarray*}
+
+And after merging all buckets:
+
+$$ [170, 90, 2, 24, 45, 75, 66] $$
