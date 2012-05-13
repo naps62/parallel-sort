@@ -1,20 +1,19 @@
 #!/bin/bash
 #
-#PBS -l nodes=3:r601:ppn=24
+#PBS -V
+#PBS -l nodes=2:r601:ppn=24
 #PBS -l walltime=2:00:00
-#PBS -N radix.mpi64.bal
+#PBS -N radix.mpi_16_32
 #PBS -m bea
-#PBS -e out/mpi_bal.err
-#PBS -o out/mpi_bal.out
-
-module load gnu/openmpi
+#PBS -e out/mpi_16_32.err
+#PBS -o out/mpi_16_32.out
 
 cd $PBS_O_WORKDIR
 
 NUM_EXECS=5
 G=(2 4 8)
 SIZES=(256 4096 65536 1048576 16777216)
-THREADS=(64)
+THREADS=(16 32)
 
 for g in ${G[@]}; do
 	
@@ -23,12 +22,12 @@ for g in ${G[@]}; do
 		for threads in ${THREADS[@]}; do
 
 			mkdir -p results/mpi
-			output=results/mpi.bal/${g}_s${size}_t${threads}
+			output=results/mpi/${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do
 				echo "running try $try, g=$g, size=$size, threads=$threads"
-				mpirun -n $threads -machinefile $PBS_NODEFILE bin/radix.bal.mpi $size $g >> $output
+				mpirun -loadbalance -n $threads -machinefile $PBS_NODEFILE bin/radix.mpi $size $g >> $output
 			done
 		done
 	done

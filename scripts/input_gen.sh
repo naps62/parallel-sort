@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ELEMS=16777216
+ELEMS=134217728
 
 bin/gen $ELEMS > input
