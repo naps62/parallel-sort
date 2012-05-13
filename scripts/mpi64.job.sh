@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-#PBS -l nodes=1:r601:ppn=24
+#PBS -l nodes=3:r601:ppn=24
 #PBS -l walltime=2:00:00
-#PBS -N radix.mpi
+#PBS -N radix.mpi64
 #PBS -m bea
 #PBS -e out/mpi.err
 #PBS -o out/mpi.out
@@ -14,7 +14,7 @@ cd $PBS_O_WORKDIR
 NUM_EXECS=5
 G=(2 4 8)
 SIZES=(256 4096 65536 1048576 16777216)
-THREADS=(4 8 16)
+THREADS=(64)
 
 for g in ${G[@]}; do
 	
