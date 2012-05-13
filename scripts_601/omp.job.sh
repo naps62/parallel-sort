@@ -4,8 +4,8 @@
 #PBS -l walltime=2:00:00
 #PBS -N 601_radix.omp
 #PBS -m bea
-#PBS -e out/omp.err
-#PBS -o out/omp.out
+#PBS -e out_601/omp.err
+#PBS -o out_601/omp.out
 
 cd $PBS_O_WORKDIR
 
@@ -20,8 +20,8 @@ for g in ${G[@]}; do
 
 		for threads in ${THREADS[@]}; do
 
-			mkdir -p results/omp
-			output=results/omp/g${g}_s${size}_t${threads}
+			mkdir -p results_601/omp
+			output=results_601/omp/g${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do

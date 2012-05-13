@@ -5,8 +5,8 @@
 #PBS -l walltime=2:00:00
 #PBS -N 601_radix.mpi_16_32.bal
 #PBS -m bea
-#PBS -e out/mpi_16_32.bal.err
-#PBS -o out/mpi_16_32.bal.out
+#PBS -e out_601/mpi_16_32.bal.err
+#PBS -o out_601/mpi_16_32.bal.out
 
 cd $PBS_O_WORKDIR
 
@@ -21,8 +21,8 @@ for g in ${G[@]}; do
 
 		for threads in ${THREADS[@]}; do
 
-			mkdir -p results/mpi.bal
-			output=results/mpi.bal/${g}_s${size}_t${threads}
+			mkdir -p results_601/mpi.bal
+			output=results_601/mpi.bal/${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do
