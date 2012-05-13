@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-#PBS -l nodes=1:r301:ppn=8
+#PBS -l nodes=1:r311:ppn=8
 #PBS -l walltime=2:00:00
-#PBS -N 301_radix.omp
+#PBS -N 311_radix.omp
 #PBS -m bea
-#PBS -e out_301/omp.err
-#PBS -o out_301/omp.out
+#PBS -e out_311/omp.err
+#PBS -o out_311/omp.out
 
 cd $PBS_O_WORKDIR
 
@@ -20,8 +20,8 @@ for g in ${G[@]}; do
 
 		for threads in ${THREADS[@]}; do
 
-			mkdir -p results_301/omp
-			output=results_301/omp/g${g}_s${size}_t${threads}
+			mkdir -p results_311/omp
+			output=results_311/omp/g${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do

@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-#PBS -l nodes=1:r401:ppn=16
+#PBS -l nodes=1:r101:ppn=4
 #PBS -l walltime=2:00:00
-#PBS -N 401_radix.seq
+#PBS -N 101_radix.seq
 #PBS -m bea
-#PBS -e out_401/seq.err
-#PBS -o out_401/seq.out
+#PBS -e out_101/seq.err
+#PBS -o out_101/seq.out
 
 cd $PBS_O_WORKDIR
 
@@ -17,8 +17,8 @@ for g in ${G[@]}; do
 	
 	for size in ${SIZES[@]}; do
 
-		mkdir -p results_401/seq
-		output=results_401/seq/g${g}_s${size}
+		mkdir -p results_101/seq
+		output=results_101/seq/g${g}_s${size}
 		rm $output && touch $output
 
 		for try in `seq 1 $NUM_EXECS`; do

@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #PBS -V
-#PBS -l nodes=1:r601:ppn=24
+#PBS -l nodes=1:hex:ppn=24
 #PBS -l walltime=2:00:00
 #PBS -N radix.mpi_4_8.bal
 #PBS -m bea

@@ -1,12 +1,12 @@
 #!/bin/bash
 #
 #PBS -V
-#PBS -l nodes=1:r401:ppn=16
+#PBS -l nodes=2:r101:ppn=4
 #PBS -l walltime=2:00:00
-#PBS -N 401_radix.mpi_4_8
+#PBS -N 101_radix.mpi_4_8
 #PBS -m bea
-#PBS -e out_401/mpi_4_8.err
-#PBS -o out_401/mpi_4_8.out
+#PBS -e out_101/mpi_4_8.err
+#PBS -o out_101/mpi_4_8.out
 
 cd $PBS_O_WORKDIR
 
@@ -21,8 +21,8 @@ for g in ${G[@]}; do
 
 		for threads in ${THREADS[@]}; do
 
-			mkdir -p results_401/mpi
-			output=results_401/mpi/${g}_s${size}_t${threads}
+			mkdir -p results_101/mpi
+			output=results_101/mpi/${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do
