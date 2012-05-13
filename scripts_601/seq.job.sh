@@ -2,7 +2,7 @@
 #
 #PBS -l nodes=1:hex:ppn=24
 #PBS -l walltime=2:00:00
-#PBS -N radix.seq
+#PBS -N 601_radix.seq
 #PBS -m bea
 #PBS -e out/seq.err
 #PBS -o out/seq.out

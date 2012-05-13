@@ -2,7 +2,7 @@
 #
 #PBS -l nodes=1:hex:ppn=24
 #PBS -l walltime=2:00:00
-#PBS -N radix.omp
+#PBS -N 601_radix.omp
 #PBS -m bea
 #PBS -e out/omp.err
 #PBS -o out/omp.out
