@@ -1,10 +1,10 @@
 \documentclass[abstract=on,9pt,twocolumn]{scrartcl}
 
+\usepackage[paper=a4paper,top=2cm,left=1.5cm,right=1.5cm,bottom=2cm,foot=1cm]{geometry}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage[paper=a4paper,top=2cm,left=1.5cm,right=1.5cm,bottom=2cm,foot=1cm]{geometry}
 \usepackage{relsize}%	relative font sizes
 \usepackage[retainorgcmds]{IEEEtrantools}%	IEEEeqnarray
 \setlength{\IEEEnormaljot}{4\IEEEnormaljot}
@@ -16,6 +16,17 @@
 %\usepackage[noabbrev]{cleveref}
 \usepackage{listings}
 \usepackage{color}
+
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	tabsize=3,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true
+}
 
 %%%%%%%%%%%%%%%%
 %  title page  %
@@ -41,12 +52,12 @@
 \begin{document}
 	\maketitle
 
-	\input{report_files/0_abstract.tex}	% Abstract
-	\input{report_files/1_intro.tex}		% Introduction
+	\input{report_files/0_abstract}	% Abstract
+	\input{report_files/1_intro}		% Introduction
 	\input{report_files/2_radix}		% Radix explanation
 	% TODO add stuff here
 	
-	\input{report_files/9_conclusion.tex}	% Conclusion
+	\input{report_files/9_conclusion}	% Conclusion
 
 	\bibliographystyle{IEEE}
 %\begin{thebibliography}{12345}

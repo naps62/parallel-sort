@@ -1,0 +1,29 @@
+\section{MPI}
+
+\begin{frame}
+	\frametitle{Initial MPI Implementation}
+
+	\begin{itemize}
+		\item[] Each process starts with an initial partition of the array
+
+		\item[] Like the OpenMP version, each bucket is assigned to a process
+	\end{itemize}
+
+
+	\begin{enumerate}\itemsep=15pt
+		\item Local Bucket fill
+
+		\item \emph{1-to-all} transpose operation
+		\begin{itemize}
+			\item Bucket sizes are sent to the processes that they are assigned to
+		\end{itemize}
+
+		\item Communication
+		\begin{itemize}
+			\item Send/Receive local keys to where they belong
+		\end{itemize}
+
+	\end{enumerate}
+
+	After each iteration, load balance changes completely
+\end{frame}

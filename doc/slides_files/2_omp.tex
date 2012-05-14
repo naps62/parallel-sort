@@ -1,0 +1,19 @@
+\section{OpenMP}
+
+\begin{frame}
+	\frametitle{OpenMP Implementation}
+
+	Each iteration now has three steps
+
+\begin{enumerate}\itemsep=15pt
+		\item Bucket fill
+		\begin{itemize}
+			\item[-] With $P$ threads, each thread handles P/B buckets
+			\item[-] Each thread iterates entire array, but tasks are not homogeneous
+		\end{itemize}
+
+		\item Master thread computes offset for each bucket
+
+		\item Each thread copies keys on buckets to global array
+	\end{enumerate}
+\end{frame}

@@ -1,0 +1,65 @@
+\section{Radix Sort}
+
+\begin{frame}
+	\frametitle{Sequential Radix Sort}
+
+	\begin{itemize}\itemsep=10pt
+		\item Non-comparative sorting algorithm
+		\item Works on integer or string keys
+		\item Sort is done based on digits
+		\item For each digit, set is iterated once
+		\begin{itemize}
+			\item[-] Complexity $O(k \cdot N)$, where $k$ is number of digits of the largest key
+		\end{itemize}
+
+		\item Two versions
+			\begin{itemize}
+				\item[-] LSD: Iterative, easier to implement
+				\item[-] MSD: Recursive, trivial to parallelize (but with less balance control)
+				\item[-] This project considers only the LSD version
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+   \frametitle{Sequential Radix Sort - Example}
+
+	Initial array:
+	\begin{lstlisting}^^J
+		arr = [170, 45, 75, 90, 802, 24, 2, 66]^^J
+	\end{lstlisting}
+
+	First iteration (sort by first digit)
+	\begin{lstlisting}^^J
+		0: [170, 90],^^J
+		2: [802, 2],^^J
+		4: [24],^^J
+		5: [45, 75],^^J
+		6: [66]^^J
+	\end{lstlisting}
+
+	Result after first iteration:
+	\begin{lstlisting}^^J
+		arr = [170, 90, 802, 2, 24, 45, 75, 66]^^J
+	\end{lstlisting}
+	
+\end{frame}
+
+\section{Sequential}
+
+\begin{frame}
+	\frametitle{Sequential Radix Sort - Implementation}
+
+	\begin{itemize}\itemsep=10pt
+		\item Bitwise operators, and base 2 digits are used, allowing better performance.\\
+
+		\item Amount of bits per digit ($g$) influences total number of buckets ($B = 2^g$)
+		
+		\begin{description}\itemsep=8pt
+			\item[small $g$] Less buckets, but more iterations
+			\item[big $g$] More buckets and less iterations, but more fragmentation and memory overhead
+		\end{description}
+
+	\end{itemize}
+
+\end{frame}

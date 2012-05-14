@@ -13,19 +13,25 @@ This report will focus only on the first version, since it's an iterative, simpl
 
 Consider the following list of integers:
 
-\begin{IEEEeqnarray*}{C}
-	[170, 45, 75, 90, 802, 24, 2, 66]
-\end{IEEEeqnarray*}
+\begin{lstlisting}
+	arr = [170, 45, 75, 90, 802, 24, 2, 66]
+\end{lstlisting}
 
 In the first iteration, the least significant digit is considered. After sending each key into the correct bucket, the result is the following:
 
-\begin{IEEEeqnarray*}{C}
-	0: [170, 90],	\\
-	2: [2], 4: [24]	\\
-	5: [45, 75]		\\
+\begin{lstlisting}
+	0: [170, 90],
+	2: [802, 2],
+	4: [24],
+	5: [45, 75],
 	6: [66]
-\end{IEEEeqnarray*}
+\end{lstlisting}
 
 And after merging all buckets:
 
-$$ [170, 90, 2, 24, 45, 75, 66] $$
+\begin{lstlisting}
+	arr = [170, 90, 802, 2, 24, 45, 75, 66]
+\end{lstlisting}
+
+This completes the first iteration. The process is repeated until there are no more digits do process. In the previous example, two more iterations would be necessary for the array to be completely ordered.
+To order the keys descendingly, the only change would be on the merging step, where the arrays would be merged starting from the last one.

@@ -1,0 +1,73 @@
+\documentclass{beamer}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+%\usepackage{multirow}%	multirow
+%\usepackage[retainorgcmds]{IEEEtrantools}%	IEEEeqnarray
+%\usepackage{mathabx}%	convolution symbol
+\usepackage{relsize}%	relative font sizes
+%\usepackage{listings}
+%\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{color}
+
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily\footnotesize,
+	showspaces=false,
+	showtabs=false,
+	tabsize=3,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true
+}
+
+
+%	presentation info
+\title{Parallel Radix Sort}
+\author{Miguel Palhas, pg19808@alunos.uminho.pt \\
+	\footnotesize{\url{www.github.com/naps62/parallel-sort}}}
+\institute[19808]{
+	University of Minho\\
+	Department of Informatics
+}
+\date{Braga, May 2012}
+
+
+%	beamer options
+\usetheme{CambridgeUS}
+
+
+\begin{document}%	begin presentation
+
+\maketitle
+
+\begin{frame}
+	\frametitle{Index}
+	\tableofcontents
+\end{frame}
+
+\input{slides_files/1_radix}   % radix
+\input{slides_files/2_omp}     % omp implementation
+\input{slides_files/3_mpi}     % mpi implementation
+\input{slides_files/4_mpi_bal} % mpi load balance
+\input{slides_files/5_method}  % testing methodology
+\input{slides_files/6_results} % test results
+
+
+\section{Questions}
+\begin{frame}
+	\titlepage
+	\begin{center}
+		\Huge\bfseries
+		- ? -
+	\end{center}
+\end{frame}
+
+\end{document}%	end presentation
