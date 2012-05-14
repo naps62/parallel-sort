@@ -20,6 +20,7 @@ results/
 out/
 
 # latex
+*.aux
 doc/*.aux
 doc/*.log
 doc/*.out
