@@ -1,0 +1,1134 @@
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 59
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 59
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 59
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 59
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 59
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 23
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 23
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 23
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 23
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 23
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 42
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 42
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 42
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 42
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 42
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 29
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 29
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 29
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 29
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 29
+mask size = 2
+
+starting radix sort...[compute-511-1:01122] *** Process received signal ***
+[compute-511-1:01122] Signal: Segmentation fault (11)
+[compute-511-1:01122] Signal code: Address not mapped (1)
+[compute-511-1:01122] Failing at address: 0xc001370
+[compute-511-1:01120] *** Process received signal ***
+[compute-511-1:01120] Signal: Segmentation fault (11)
+[compute-511-1:01120] Signal code: Address not mapped (1)
+[compute-511-1:01120] Failing at address: 0x1b018068
+[compute-511-1:01122] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01122] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01122] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b43f3c1996c]
+[compute-511-1:01122] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3c4946a]
+[compute-511-1:01122] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3cb486a]
+[compute-511-1:01122] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3cae9e8]
+[compute-511-1:01122] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3c4aa79]
+[compute-511-1:01122] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b43f422b45a]
+[compute-511-1:01122] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3c0c005]
+[compute-511-1:01122] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3c4f067]
+[compute-511-1:01122] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b43f3c582fc]
+[compute-511-1:01122] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b43f3c2077c]
+[compute-511-1:01122] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01122] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01122] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01122] *** End of error message ***
+[compute-511-1:01120] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01120] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01120] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b11a445c96c]
+[compute-511-1:01120] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b11a448c46a]
+[compute-511-1:01120] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b11a44f786a]
+[compute-511-1:01120] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b11a44f19e8]
+[compute-511-1:01120] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b11a448da79]
+[compute-511-1:01120] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b11a4a6e45a]
+[compute-511-1:01120] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b11a444f005]
+[compute-511-1:01120] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b11a4492067]
+[compute-511-1:01120] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b11a449b2fc]
+[compute-511-1:01120] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b11a446377c]
+[compute-511-1:01120] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01120] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01120] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01120] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1120 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 2
+
+starting radix sort...[compute-511-1:01183] *** Process received signal ***
+[compute-511-1:01183] Signal: Segmentation fault (11)
+[compute-511-1:01183] Signal code: Address not mapped (1)
+[compute-511-1:01183] Failing at address: 0x12783d10
+[compute-511-1:01183] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01183] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01183] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2adff3fa096c]
+[compute-511-1:01183] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2adff3fd046a]
+[compute-511-1:01183] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2adff403b86a]
+[compute-511-1:01183] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2adff40359e8]
+[compute-511-1:01183] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2adff3fd1a79]
+[compute-511-1:01183] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2adff45b245a]
+[compute-511-1:01183] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2adff3f93005]
+[compute-511-1:01183] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2adff3fd6067]
+[compute-511-1:01183] [10] /opt/openmpi/lib/libmpi.so.0 [0x2adff3fdf2fc]
+[compute-511-1:01183] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2adff3fa777c]
+[compute-511-1:01183] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01183] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01183] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01183] *** End of error message ***
+[compute-511-1:01185] *** Process received signal ***
+[compute-511-1:01185] Signal: Segmentation fault (11)
+[compute-511-1:01185] Signal code: Address not mapped (1)
+[compute-511-1:01185] Failing at address: 0x76debc8
+[compute-511-1:01185] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01185] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01185] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b1ac438d96c]
+[compute-511-1:01185] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac43bd46a]
+[compute-511-1:01185] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac442886a]
+[compute-511-1:01185] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac44229e8]
+[compute-511-1:01185] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac43bea79]
+[compute-511-1:01185] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b1ac499f45a]
+[compute-511-1:01185] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac4380005]
+[compute-511-1:01185] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac43c3067]
+[compute-511-1:01185] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b1ac43cc2fc]
+[compute-511-1:01185] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b1ac439477c]
+[compute-511-1:01185] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01185] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01185] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01185] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1183 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 2
+
+starting radix sort...[compute-511-1:01217] *** Process received signal ***
+[compute-511-1:01217] Signal: Segmentation fault (11)
+[compute-511-1:01217] Signal code: Address not mapped (1)
+[compute-511-1:01217] Failing at address: 0xb269a94
+[compute-511-1:01217] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01217] [ 1] /lib64/libc.so.6(memcpy+0xa0) [0x3ea1e7b4e0]
+[compute-511-1:01217] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b8ce709d96c]
+[compute-511-1:01217] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce70cd46a]
+[compute-511-1:01217] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce713886a]
+[compute-511-1:01217] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce71329e8]
+[compute-511-1:01217] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce70cea79]
+[compute-511-1:01217] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b8ce76af45a]
+[compute-511-1:01217] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce7090005]
+[compute-511-1:01217] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce70d3067]
+[compute-511-1:01217] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b8ce70dc2fc]
+[compute-511-1:01217] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b8ce70a477c]
+[compute-511-1:01217] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01217] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01217] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01217] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1217 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+[compute-511-1:01219] *** Process received signal ***
+[compute-511-1:01219] Signal: Segmentation fault (11)
+[compute-511-1:01219] Signal code: Address not mapped (1)
+[compute-511-1:01219] Failing at address: 0x24037b8
+[compute-511-1:01219] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01219] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01219] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b64a045996c]
+[compute-511-1:01219] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b64a048946a]
+[compute-511-1:01219] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b64a04f486a]
+[compute-511-1:01219] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b64a04ee9e8]
+[compute-511-1:01219] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b64a048aa79]
+[compute-511-1:01219] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b64a0a6b45a]
+[compute-511-1:01219] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b64a044c005]
+[compute-511-1:01219] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b64a048f067]
+[compute-511-1:01219] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b64a04982fc]
+[compute-511-1:01219] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b64a046077c]
+[compute-511-1:01219] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01219] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01219] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01219] *** End of error message ***
+mask size = 2
+
+starting radix sort...[compute-511-1:01250] *** Process received signal ***
+[compute-511-1:01250] Signal: Segmentation fault (11)
+[compute-511-1:01250] Signal code: Address not mapped (1)
+[compute-511-1:01250] Failing at address: 0x6a5fd10
+[compute-511-1:01250] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01250] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01250] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2afca000696c]
+[compute-511-1:01250] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2afca003646a]
+[compute-511-1:01250] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2afca00a186a]
+[compute-511-1:01250] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2afca009b9e8]
+[compute-511-1:01250] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2afca0037a79]
+[compute-511-1:01250] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2afca061845a]
+[compute-511-1:01250] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2afc9fff9005]
+[compute-511-1:01250] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2afca003c067]
+[compute-511-1:01250] [10] /opt/openmpi/lib/libmpi.so.0 [0x2afca00452fc]
+[compute-511-1:01250] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2afca000d77c]
+[compute-511-1:01250] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01250] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01250] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01250] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1250 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+[compute-511-1:01252] *** Process received signal ***
+[compute-511-1:01252] Signal: Segmentation fault (11)
+[compute-511-1:01252] Signal code: Address not mapped (1)
+[compute-511-1:01252] Failing at address: 0x9b51bc8
+[compute-511-1:01252] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01252] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01252] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2af8dfada96c]
+[compute-511-1:01252] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb0a46a]
+[compute-511-1:01252] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb7586a]
+[compute-511-1:01252] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb6f9e8]
+[compute-511-1:01252] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb0ba79]
+[compute-511-1:01252] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2af8e00ec45a]
+[compute-511-1:01252] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfacd005]
+[compute-511-1:01252] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb10067]
+[compute-511-1:01252] [10] /opt/openmpi/lib/libmpi.so.0 [0x2af8dfb192fc]
+[compute-511-1:01252] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2af8dfae177c]
+[compute-511-1:01252] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01252] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01252] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01252] *** End of error message ***
+mask size = 2
+
+starting radix sort...[compute-511-1:01283] *** Process received signal ***
+[compute-511-1:01283] Signal: Segmentation fault (11)
+[compute-511-1:01283] Signal code: Address not mapped (1)
+[compute-511-1:01283] Failing at address: 0x1d40bd10
+[compute-511-1:01283] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:01283] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:01283] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2aefff68596c]
+[compute-511-1:01283] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2aefff6b546a]
+[compute-511-1:01283] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2aefff72086a]
+[compute-511-1:01283] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2aefff71a9e8]
+[compute-511-1:01283] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2aefff6b6a79]
+[compute-511-1:01283] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2aefffc9745a]
+[compute-511-1:01283] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2aefff678005]
+[compute-511-1:01283] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2aefff6bb067]
+[compute-511-1:01283] [10] /opt/openmpi/lib/libmpi.so.0 [0x2aefff6c42fc]
+[compute-511-1:01283] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2aefff68c77c]
+[compute-511-1:01283] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:01283] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:01283] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:01283] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1283 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+[compute-511-1:01285] *** Process received signal ***
+[compute-511-1:01285] Signal: Segmentation fault (11)
+[compute-511-1:01285] Signal code: Address not mapped (1)
+[compute-511-1:01285] Failing at address: 0x12689bc8
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663327
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663327
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100662785
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100662785
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663327
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440531
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440531
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440531
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440531
+mask size = 2
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440531
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 30
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 30
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 30
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 30
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 30
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 4
+
+starting radix sort...[compute-511-1:02347] *** Process received signal ***
+[compute-511-1:02347] Signal: Segmentation fault (11)
+[compute-511-1:02347] Signal code: Address not mapped (1)
+[compute-511-1:02347] Failing at address: 0x1783fae0
+[compute-511-1:02347] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02347] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02347] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2ba44ff7096c]
+[compute-511-1:02347] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2ba44ffa046a]
+[compute-511-1:02347] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2ba45000b86a]
+[compute-511-1:02347] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2ba4500059e8]
+[compute-511-1:02347] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2ba44ffa1a79]
+[compute-511-1:02347] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2ba45058245a]
+[compute-511-1:02347] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2ba44ff63005]
+[compute-511-1:02347] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2ba44ffa6067]
+[compute-511-1:02347] [10] /opt/openmpi/lib/libmpi.so.0 [0x2ba44ffaf2fc]
+[compute-511-1:02347] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2ba44ff7777c]
+[compute-511-1:02347] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02347] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02347] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02347] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2347 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02376] *** Process received signal ***
+[compute-511-1:02376] Signal: Segmentation fault (11)
+[compute-511-1:02376] Signal code: Address not mapped (1)
+[compute-511-1:02376] Failing at address: 0x14ce0ae0
+[compute-511-1:02376] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02376] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02376] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2aac6fc4696c]
+[compute-511-1:02376] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fc7646a]
+[compute-511-1:02376] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fce186a]
+[compute-511-1:02376] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fcdb9e8]
+[compute-511-1:02376] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fc77a79]
+[compute-511-1:02376] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2aac7025845a]
+[compute-511-1:02376] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fc39005]
+[compute-511-1:02376] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fc7c067]
+[compute-511-1:02376] [10] /opt/openmpi/lib/libmpi.so.0 [0x2aac6fc852fc]
+[compute-511-1:02376] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2aac6fc4d77c]
+[compute-511-1:02376] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02376] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02376] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02376] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2376 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02382] *** Process received signal ***
+[compute-511-1:02382] Signal: Segmentation fault (11)
+[compute-511-1:02382] Signal code: Address not mapped (1)
+[compute-511-1:02382] Failing at address: 0x1f550ae0
+[compute-511-1:02382] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02382] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02382] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b713e25f96c]
+[compute-511-1:02382] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b713e28f46a]
+[compute-511-1:02382] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b713e2fa86a]
+[compute-511-1:02382] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b713e2f49e8]
+[compute-511-1:02382] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b713e290a79]
+[compute-511-1:02382] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b713e87145a]
+[compute-511-1:02382] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b713e252005]
+[compute-511-1:02382] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b713e295067]
+[compute-511-1:02382] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b713e29e2fc]
+[compute-511-1:02382] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b713e26677c]
+[compute-511-1:02382] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02382] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02382] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02382] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2382 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02411] *** Process received signal ***
+[compute-511-1:02411] Signal: Segmentation fault (11)
+[compute-511-1:02411] Signal code: Address not mapped (1)
+[compute-511-1:02411] Failing at address: 0x1fef7ae0
+[compute-511-1:02411] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02411] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02411] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2ab12e45196c]
+[compute-511-1:02411] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e48146a]
+[compute-511-1:02411] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e4ec86a]
+[compute-511-1:02411] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e4e69e8]
+[compute-511-1:02411] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e482a79]
+[compute-511-1:02411] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2ab12ea6345a]
+[compute-511-1:02411] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e444005]
+[compute-511-1:02411] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e487067]
+[compute-511-1:02411] [10] /opt/openmpi/lib/libmpi.so.0 [0x2ab12e4902fc]
+[compute-511-1:02411] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2ab12e45877c]
+[compute-511-1:02411] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02411] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02411] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02411] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2411 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02416] *** Process received signal ***
+[compute-511-1:02416] Signal: Segmentation fault (11)
+[compute-511-1:02416] Signal code: Address not mapped (1)
+[compute-511-1:02416] Failing at address: 0x71c4ae0
+[compute-511-1:02416] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02416] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02416] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2af7f6eed96c]
+[compute-511-1:02416] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f1d46a]
+[compute-511-1:02416] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f8886a]
+[compute-511-1:02416] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f829e8]
+[compute-511-1:02416] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f1ea79]
+[compute-511-1:02416] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2af7f74ff45a]
+[compute-511-1:02416] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6ee0005]
+[compute-511-1:02416] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f23067]
+[compute-511-1:02416] [10] /opt/openmpi/lib/libmpi.so.0 [0x2af7f6f2c2fc]
+[compute-511-1:02416] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2af7f6ef477c]
+[compute-511-1:02416] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02416] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02416] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02416] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2416 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02449] *** Process received signal ***
+[compute-511-1:02449] Signal: Segmentation fault (11)
+[compute-511-1:02449] Signal code: Address not mapped (1)
+[compute-511-1:02449] Failing at address: 0x16152970
+[compute-511-1:02449] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02449] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02449] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b529b82896c]
+[compute-511-1:02449] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b529b85846a]
+[compute-511-1:02449] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b529b8c386a]
+[compute-511-1:02449] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b529b8bd9e8]
+[compute-511-1:02449] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b529b859a79]
+[compute-511-1:02449] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b529be3a45a]
+[compute-511-1:02449] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b529b81b005]
+[compute-511-1:02449] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b529b85e067]
+[compute-511-1:02449] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b529b8672fc]
+[compute-511-1:02449] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b529b82f77c]
+[compute-511-1:02449] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02449] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02449] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02449] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2449 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02482] *** Process received signal ***
+[compute-511-1:02482] Signal: Segmentation fault (11)
+[compute-511-1:02482] Signal code: Address not mapped (1)
+[compute-511-1:02482] Failing at address: 0x1df3a5bc
+[compute-511-1:02482] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02482] [ 1] /lib64/libc.so.6(memcpy+0xa0) [0x3ea1e7b4e0]
+[compute-511-1:02482] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2af19c09696c]
+[compute-511-1:02482] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2af19c0c646a]
+[compute-511-1:02482] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2af19c13186a]
+[compute-511-1:02482] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2af19c12b9e8]
+[compute-511-1:02482] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2af19c0c7a79]
+[compute-511-1:02482] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2af19c6a845a]
+[compute-511-1:02482] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2af19c089005]
+[compute-511-1:02482] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2af19c0cc067]
+[compute-511-1:02482] [10] /opt/openmpi/lib/libmpi.so.0 [0x2af19c0d52fc]
+[compute-511-1:02482] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2af19c09d77c]
+[compute-511-1:02482] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02482] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02482] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02482] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2482 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02491] *** Process received signal ***
+[compute-511-1:02491] Signal: Segmentation fault (11)
+[compute-511-1:02491] Signal code: Address not mapped (1)
+[compute-511-1:02491] Failing at address: 0x53a7fdc
+[compute-511-1:02491] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02491] [ 1] /lib64/libc.so.6(memcpy+0xa0) [0x3ea1e7b4e0]
+[compute-511-1:02491] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2ac9e9dad96c]
+[compute-511-1:02491] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9ddd46a]
+[compute-511-1:02491] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9e4886a]
+[compute-511-1:02491] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9e429e8]
+[compute-511-1:02491] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9ddea79]
+[compute-511-1:02491] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2ac9ea3bf45a]
+[compute-511-1:02491] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9da0005]
+[compute-511-1:02491] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9de3067]
+[compute-511-1:02491] [10] /opt/openmpi/lib/libmpi.so.0 [0x2ac9e9dec2fc]
+[compute-511-1:02491] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2ac9e9db477c]
+[compute-511-1:02491] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02491] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02491] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02491] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2491 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02524] *** Process received signal ***
+[compute-511-1:02524] Signal: Segmentation fault (11)
+[compute-511-1:02524] Signal code: Address not mapped (1)
+[compute-511-1:02524] Failing at address: 0x1fb528c0
+[compute-511-1:02524] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02524] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02524] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b49d7a2896c]
+[compute-511-1:02524] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7a5846a]
+[compute-511-1:02524] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7ac386a]
+[compute-511-1:02524] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7abd9e8]
+[compute-511-1:02524] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7a59a79]
+[compute-511-1:02524] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b49d803a45a]
+[compute-511-1:02524] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7a1b005]
+[compute-511-1:02524] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7a5e067]
+[compute-511-1:02524] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b49d7a672fc]
+[compute-511-1:02524] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b49d7a2f77c]
+[compute-511-1:02524] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02524] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02524] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02524] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2524 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-511-1:02557] *** Process received signal ***
+[compute-511-1:02557] Signal: Segmentation fault (11)
+[compute-511-1:02557] Signal code: Address not mapped (1)
+[compute-511-1:02557] Failing at address: 0xe56a210
+[compute-511-1:02557] [ 0] /lib64/libpthread.so.0 [0x3ea2a0e4c0]
+[compute-511-1:02557] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x3ea1e7b59b]
+[compute-511-1:02557] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b72e463096c]
+[compute-511-1:02557] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b72e466046a]
+[compute-511-1:02557] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b72e46cb86a]
+[compute-511-1:02557] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b72e46c59e8]
+[compute-511-1:02557] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b72e4661a79]
+[compute-511-1:02557] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b72e4c4245a]
+[compute-511-1:02557] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b72e4623005]
+[compute-511-1:02557] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b72e4666067]
+[compute-511-1:02557] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b72e466f2fc]
+[compute-511-1:02557] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b72e463777c]
+[compute-511-1:02557] [12] bin/radix.bal.mpi(main+0x339) [0x40b2d9]
+[compute-511-1:02557] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x3ea1e1d974]
+[compute-511-1:02557] [14] bin/radix.bal.mpi(__gxx_personality_v0+0x1a1) [0x409299]
+[compute-511-1:02557] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2557 on node compute-511-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663643
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663643
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663643
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663643
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 100663643
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117438018
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440793
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117440793
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117438018
+mask size = 4
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117438018
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 3
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117376637
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
+mask size = 8
+
+starting radix sort...finished
+
+WRONG! Order fails at index 117401003
+mask size = 8
+
+starting radix sort...finished
+
+CORRECT! Result is ordered
