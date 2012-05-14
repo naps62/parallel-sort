@@ -1,0 +1,1350 @@
+array len   = 256
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 4096
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 65536
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 1048576
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 2
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 8
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 16777216
+g           = 2
+num_threads = 16
+starting radix sort...finished
+
+WRONG! Order fails at index 2
+array len   = 256
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 4
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 256
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 4096
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 65536
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 1048576
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 4
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 8
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered
+array len   = 16777216
+g           = 8
+num_threads = 16
+starting radix sort...finished
+
+CORRECT! Result is ordered

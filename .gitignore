@@ -16,8 +16,6 @@ bin/
 *.a
 
 input
-results/
-out/
 
 # latex
 *.aux
