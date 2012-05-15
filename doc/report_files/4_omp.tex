@@ -1,0 +1,18 @@
+\section{OpenMP Implementation}
+\label{sec:omp}
+
+For the OpenMP implementation used, 3 steps are required in each iteration:
+
+\begin{enumerate}
+	\item Bucket Fill
+	\begin{itemize}
+		\item[-] For $P$ threads and $B$ buckets, each thread will handle $B/P$ buckets
+		\item[-] Each thread iterates entire array, inserting only on its own buckets
+	\end{itemize}
+
+	\item Master thread computes offset for each bucket on the result array
+
+	\item Each thread copies its buckets to global array
+\end{enumerate}
+
+Given that radix sort is a non-comparative sorting algorithm, and it consists mostly on memory operations, it can be easily seen that it is completely memory bound. Because of that, no good results should be expected from this shared-memory implementation. Since memory is already the bottleneck, no benefit is taken from asking more from it.

@@ -1,0 +1,6 @@
+\section{Sequential Implementation}
+\label{sec:seq}
+
+The initial implementation is straight-forward, following the explanation given on \autoref{subsec:how_it_works}. There are some differences however. Instead of base-10 digits, groups of bits were used. Each digit will consist of a group of bits, allowing for better performance (by using bitwise operators), and also to give the possibility of easily varying the amount of bits per digit.
+
+With a smaller amount of bits per digit, less buckets will be used (number of buckets is equal to $2^g$, where $g$ is the number of bits). Consequentely, more iterations will be necessary. On the other hand, a bigger value of $g$ will require more buckets, increasing the fragmentation of the data and memory overhead.

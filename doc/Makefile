@@ -1,4 +1,4 @@
-default: quick_view_slides
+default: quick_view
 	
 all: report slides
 
