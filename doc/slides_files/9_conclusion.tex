@@ -7,14 +7,14 @@
 		\item Radix sort is completely memory bound
 		\begin{itemize}
 			\item[-] Easily confirmed by observing the C++ code
-			\item[-] OpenMP fails to achieve good results
+			\item[-] OpenMP not homogeneous, gives bad results
 		\end{itemize}
 
 
 		\item MPI shows speedups for larger input sizes, but nothing amazing
 		\begin{itemize}
 			\item[-] Implementation problems
-			\item[-] Source article \footnote{\emph{``Load Balanced Parallel Radix Sort''}, Andrew Sohn and Yuetsu Kodama} claims 40-fold speedups with 64 processors
+			\item[-] Source paper \footnote{\emph{``Load Balanced Parallel Radix Sort''}, Andrew Sohn and Yuetsu Kodama} claims 40-fold speedups with 64 processors
 		\end{itemize}
 
 	\item Load Balanced strategy proved useful for bigger inputs
