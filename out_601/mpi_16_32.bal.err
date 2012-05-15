@@ -1,200 +1,39 @@
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31313) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
+[compute-601-2.local:14291] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14291] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14293] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14293] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14294] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14294] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14292] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14292] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14295] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14295] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14298] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14298] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30635] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30635] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14297] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14297] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-2.local:14296] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-2.local:14296] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30641] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30641] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30634] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30634] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30637] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30637] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30639] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30639] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30636] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30636] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30638] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30638] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-601-1.local:30640] Error in mx_init (error No MX device entry in /dev.)
+[compute-601-1.local:30640] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+mpirun: killing job...
 
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
 --------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31319) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31325) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31331) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31337) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31343) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31349) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31355) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31361) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
---------------------------------------------------------------------------
-mpirun: clean termination accomplished
-
-Permission denied, please try again.
-Permission denied, please try again.
-Permission denied (publickey,gssapi-with-mic,password).
---------------------------------------------------------------------------
-A daemon (pid 31367) died unexpectedly with status 255 while attempting
-to launch so we are aborting.
-
-There may be more information reported by the environment (see above).
-
-This may be because the daemon was unable to find all the needed shared
-libraries on the remote node. You may set your LD_LIBRARY_PATH to have the
-location of the shared libraries on the remote nodes and this will
-automatically be forwarded to the remote nodes.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-mpirun noticed that the job aborted, but has no info as to the process
-that caused that situation.
+mpirun noticed that process rank 0 with PID 14291 on node compute-601-2.local exited on signal 0 (Unknown signal 0).
 --------------------------------------------------------------------------
 mpirun: clean termination accomplished
 

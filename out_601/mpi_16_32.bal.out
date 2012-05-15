@@ -1,10 +1,1 @@
 running try 1, g=4, size=2048, threads=16
-running try 1, g=4, size=2048, threads=32
-running try 1, g=4, size=32768, threads=16
-running try 1, g=4, size=32768, threads=32
-running try 1, g=4, size=524288, threads=16
-running try 1, g=4, size=524288, threads=32
-running try 1, g=4, size=8388608, threads=16
-running try 1, g=4, size=8388608, threads=32
-running try 1, g=4, size=134217728, threads=16
-running try 1, g=4, size=134217728, threads=32

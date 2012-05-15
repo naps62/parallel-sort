@@ -1,0 +1,461 @@
+[compute-101-19.local:14662] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14662] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14664] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14664] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14665] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14665] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14663] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14663] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+mask size = 4
+
+starting radix sort...[compute-101-1.local:11912] *** An error occurred in MPI_Recv
+[compute-101-1.local:11912] *** on communicator MPI_COMM_WORLD
+[compute-101-1.local:11912] *** MPI_ERR_TRUNCATE: message truncated
+[compute-101-1.local:11912] *** MPI_ERRORS_ARE_FATAL (your MPI job will now abort)
+[compute-101-19.local][[11363,1],23][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 4 with PID 11912 on
+node compute-101-1 exiting without calling "finalize". This may
+have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[compute-101-10.local:20756] 1 more process has sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[compute-101-10.local:20756] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14668] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14668] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14669] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14669] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14667] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14667] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14670] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14670] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+mask size = 4
+
+starting radix sort...[compute-101-1.local:11927] *** An error occurred in MPI_Recv
+[compute-101-1.local:11927] *** on communicator MPI_COMM_WORLD
+[compute-101-1.local:11927] *** MPI_ERR_TRUNCATE: message truncated
+[compute-101-1.local:11927] *** MPI_ERRORS_ARE_FATAL (your MPI job will now abort)
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 6 with PID 11927 on
+node compute-101-1 exiting without calling "finalize". This may
+have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[compute-101-19.local][[11358,1],22][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-17.local][[11358,1],31][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-6.local][[11358,1],55][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+
+[compute-101-18.local][[11358,1],27][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-18.local][[11358,1],27][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-17.local][[11358,1],31][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-9.local][[11358,1],47][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-6.local][[11358,1],53][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-14.local][[11358,1],56][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-5.local][[11358,1],60][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-9.local][[11358,1],47][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-6.local][[11358,1],52][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-14.local][[11358,1],57][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-5.local][[11358,1],61][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-14.local][[11358,1],58][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+
+[compute-101-19.local][[11358,1],22][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-10.local:20777] 14 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[compute-101-10.local:20777] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14672] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14672] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14675] Error in mx_init (error No MX device entry in /dev.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14675] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14673] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14673] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14674] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14674] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+mask size = 4
+
+starting radix sort...[compute-101-2.local:20137] *** An error occurred in MPI_Recv
+[compute-101-2.local:20137] *** on communicator MPI_COMM_WORLD
+[compute-101-2.local:20137] *** MPI_ERR_TRUNCATE: message truncated
+[compute-101-2.local:20137] *** MPI_ERRORS_ARE_FATAL (your MPI job will now abort)
+[compute-101-19.local][[11341,1],20][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-10.local][[11341,1],0][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-10.local][[11341,1],0][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-10.local][[11341,1],1][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-10.local][[11341,1],1][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 11 with PID 20139 on
+node compute-101-2 exiting without calling "finalize". This may
+have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[compute-101-18.local][[11341,1],26][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-15.local][[11341,1],35][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-17.local][[11341,1],31][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-12.local][[11341,1],39][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-11.local][[11341,1],43][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-9.local][[11341,1],47][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-7.local][[11341,1],49][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-14.local][[11341,1],56][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-5.local][[11341,1],60][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-2.local][[11341,1],10][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-18.local][[11341,1],27][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-18.local][[11341,1],27][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-15.local][[11341,1],35][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-17.local][[11341,1],30][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-12.local][[11341,1],39][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-11.local][[11341,1],43][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-9.local][[11341,1],47][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-7.local][[11341,1],50][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-6.local][[11341,1],55][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-14.local][[11341,1],57][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-5.local][[11341,1],61][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+
+[compute-101-2.local][[11341,1],10][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-17.local][[11341,1],31][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-7.local][[11341,1],51][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-14.local][[11341,1],58][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[compute-101-5.local][[11341,1],63][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+
+[compute-101-17.local][[11341,1],30][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-6.local][[11341,1],53][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] [compute-101-14.local][[11341,1],59][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)[compute-101-18.local][[11341,1],26][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] 
+[compute-101-6.local][[11341,1],54][btl_tcp_frag.c:216:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+
+
+[compute-101-10.local:20794] 15 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[compute-101-10.local:20794] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14681] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14681] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14682] Error in mx_init (error No MX device entry in /dev.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14682] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14684] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14684] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14683] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14683] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+mask size = 4
+
+starting radix sort...[compute-101-19.local:14682] *** An error occurred in MPI_Recv
+[compute-101-19.local:14682] *** on communicator MPI_COMM_WORLD
+[compute-101-19.local:14682] *** MPI_ERR_TRUNCATE: message truncated
+[compute-101-19.local:14682] *** MPI_ERRORS_ARE_FATAL (your MPI job will now abort)
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 21 with PID 14682 on
+node compute-101-19 exiting without calling "finalize". This may
+have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[compute-101-19.local:14716] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14716] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+[compute-101-19.local:14717] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14717] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+[compute-101-19.local:14719] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14719] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+[compute-101-19.local:14718] Error in mx_init (error No MX device entry in /dev.)
+[compute-101-19.local:14718] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+warning:regcache incompatible with malloc
+mask size = 4
+
+starting radix sort...[compute-101-17.local:15730] *** An error occurred in MPI_Recv
+[compute-101-17.local:15730] *** on communicator MPI_COMM_WORLD
+[compute-101-17.local:15730] *** MPI_ERR_TRUNCATE: message truncated
+[compute-101-17.local:15730] *** MPI_ERRORS_ARE_FATAL (your MPI job will now abort)
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 30 with PID 15730 on
+node compute-101-17 exiting without calling "finalize". This may
+have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[compute-101-10.local:20862] 2 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[compute-101-10.local:20862] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
