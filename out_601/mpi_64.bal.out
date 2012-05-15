@@ -1,0 +1,15 @@
+running try 1, g=2, size=2048, threads=64
+running try 1, g=2, size=32768, threads=64
+running try 1, g=2, size=524288, threads=64
+running try 1, g=2, size=8388608, threads=64
+running try 1, g=2, size=134217728, threads=64
+running try 1, g=4, size=2048, threads=64
+running try 1, g=4, size=32768, threads=64
+running try 1, g=4, size=524288, threads=64
+running try 1, g=4, size=8388608, threads=64
+running try 1, g=4, size=134217728, threads=64
+running try 1, g=8, size=2048, threads=64
+running try 1, g=8, size=32768, threads=64
+running try 1, g=8, size=524288, threads=64
+running try 1, g=8, size=8388608, threads=64
+running try 1, g=8, size=134217728, threads=64
