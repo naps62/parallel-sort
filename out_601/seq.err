@@ -1,90 +1,10 @@
-rm: cannot remove `results_601/seq/g2_s2048': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g2_s32768': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g2_s524288': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g2_s8388608': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g2_s134217728': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 rm: cannot remove `results_601/seq/g4_s2048': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 CORRECT! Result is ordered
 rm: cannot remove `results_601/seq/g4_s32768': No such file or directory
 CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 rm: cannot remove `results_601/seq/g4_s524288': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 CORRECT! Result is ordered
 rm: cannot remove `results_601/seq/g4_s8388608': No such file or directory
 CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 rm: cannot remove `results_601/seq/g4_s134217728': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g8_s2048': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g8_s32768': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g8_s524288': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g8_s8388608': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-rm: cannot remove `results_601/seq/g8_s134217728': No such file or directory
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 CORRECT! Result is ordered

@@ -1,13 +1,3 @@
-running try 1, g=2, size=2048, threads=4
-running try 1, g=2, size=2048, threads=8
-running try 1, g=2, size=32768, threads=4
-running try 1, g=2, size=32768, threads=8
-running try 1, g=2, size=524288, threads=4
-running try 1, g=2, size=524288, threads=8
-running try 1, g=2, size=8388608, threads=4
-running try 1, g=2, size=8388608, threads=8
-running try 1, g=2, size=134217728, threads=4
-running try 1, g=2, size=134217728, threads=8
 running try 1, g=4, size=2048, threads=4
 running try 1, g=4, size=2048, threads=8
 running try 1, g=4, size=32768, threads=4
@@ -18,13 +8,3 @@ running try 1, g=4, size=8388608, threads=4
 running try 1, g=4, size=8388608, threads=8
 running try 1, g=4, size=134217728, threads=4
 running try 1, g=4, size=134217728, threads=8
-running try 1, g=8, size=2048, threads=4
-running try 1, g=8, size=2048, threads=8
-running try 1, g=8, size=32768, threads=4
-running try 1, g=8, size=32768, threads=8
-running try 1, g=8, size=524288, threads=4
-running try 1, g=8, size=524288, threads=8
-running try 1, g=8, size=8388608, threads=4
-running try 1, g=8, size=8388608, threads=8
-running try 1, g=8, size=134217728, threads=4
-running try 1, g=8, size=134217728, threads=8

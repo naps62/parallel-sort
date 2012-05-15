@@ -1,353 +1,3 @@
-[compute-601-1.local:20101] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20101] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20102] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20102] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20104] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20104] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20103] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20103] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-
-[compute-601-1.local:20110] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20110] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20112] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20112] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20111] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20111] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20114] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20114] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20115] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20115] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20113] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20113] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20117] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20117] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20116] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20116] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20123] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20123] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20125] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20125] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20124] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20124] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20126] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20126] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20132] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20132] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20133] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20133] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20135] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20135] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20136] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20136] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20134] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20134] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20137] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20137] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20138] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20138] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20139] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20139] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-
-
-
-[compute-601-1.local:20146] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20146] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20145] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20145] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20147] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20147] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20148] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20148] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
-
-
-[compute-601-1.local:20155] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20155] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20157] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20157] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20154] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20154] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20156] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20156] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20158] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20158] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20160] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20160] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20159] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20159] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20161] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20161] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20168] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20168] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20170] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20170] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20167] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20167] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20169] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20169] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...[compute-601-1:20170] *** Process received signal ***
-[compute-601-1:20170] Signal: Segmentation fault (11)
-[compute-601-1:20170] Signal code: Address not mapped (1)
-[compute-601-1:20170] Failing at address: 0x1a48b638
-[compute-601-1:20170] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20170] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20170] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b594f0bbd0c]
-[compute-601-1:20170] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f0ee50a]
-[compute-601-1:20170] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f15b3ea]
-[compute-601-1:20170] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f155598]
-[compute-601-1:20170] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f0f0879]
-[compute-601-1:20170] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b594f6d545a]
-[compute-601-1:20170] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f0ae3a5]
-[compute-601-1:20170] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f0f4bb7]
-[compute-601-1:20170] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b594f0fde4c]
-[compute-601-1:20170] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b594f0c2b1c]
-[compute-601-1:20170] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20170] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20170] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20170] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 3 with PID 20170 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20201] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20201] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20200] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20200] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20202] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20202] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20203] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20203] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20205] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20205] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20204] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20204] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20207] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20207] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20206] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20206] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-
-[compute-601-1.local:20215] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20215] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20213] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20213] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20214] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20214] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20216] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20216] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...[compute-601-1:20215] *** Process received signal ***
-[compute-601-1:20215] Signal: Segmentation fault (11)
-[compute-601-1:20215] Signal code: Address not mapped (1)
-[compute-601-1:20215] Failing at address: 0x2b36e9a40fc8
-[compute-601-1:20215] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20215] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20215] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b36d5317d0c]
-[compute-601-1:20215] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d534a50a]
-[compute-601-1:20215] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d53b73ea]
-[compute-601-1:20215] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d53b1598]
-[compute-601-1:20215] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d534c879]
-[compute-601-1:20215] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b36d593145a]
-[compute-601-1:20215] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d530a3a5]
-[compute-601-1:20215] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d5350bb7]
-[compute-601-1:20215] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b36d5359e4c]
-[compute-601-1:20215] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b36d531eb1c]
-[compute-601-1:20215] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20215] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20215] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20215] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 2 with PID 20215 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20298] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20298] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20295] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20295] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20297] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20297] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20300] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20300] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20296] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20296] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20299] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20299] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20301] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20301] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20302] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20302] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 2
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-
-
-[compute-601-1.local:20360] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20360] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20362] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20362] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20361] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20361] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20363] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20363] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20370] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20370] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20371] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20371] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20373] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20373] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20372] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20372] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20375] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20375] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20374] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20374] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20369] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20369] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20376] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20376] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-
-CORRECT! Result is ordered
-[compute-601-1.local:20382] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20382] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20383] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20383] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20384] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20384] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20385] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20385] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-
-[compute-601-1.local:20391] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20391] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20392] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20392] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20396] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20396] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20394] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20394] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20395] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20395] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20393] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20393] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20397] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20397] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20398] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20398] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20406] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20406] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20407] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20407] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20404] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20404] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20405] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20405] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
 mask size = 4
 
 starting radix sort...finished
@@ -356,22 +6,6 @@ CORRECT! Result is ordered
 CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
 
 
-[compute-601-1.local:20413] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20413] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20415] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20415] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20414] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20414] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20418] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20418] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20416] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20416] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20419] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20419] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20420] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20417] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20420] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20417] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
 mask size = 4
 
 starting radix sort...finished
@@ -384,187 +18,7 @@ CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
-[compute-601-1.local:20427] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20426] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20427] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20426] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20428] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20428] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20429] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20429] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
 mask size = 4
-
-starting radix sort...[compute-601-1:20429] *** Process received signal ***
-[compute-601-1:20429] Signal: Segmentation fault (11)
-[compute-601-1:20429] Signal code: Address not mapped (1)
-[compute-601-1:20429] Failing at address: 0x18a6a188
-[compute-601-1:20429] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20429] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20429] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b55aa273d0c]
-[compute-601-1:20429] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa2a650a]
-[compute-601-1:20429] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa3133ea]
-[compute-601-1:20429] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa30d598]
-[compute-601-1:20429] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa2a8879]
-[compute-601-1:20429] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b55aa88d45a]
-[compute-601-1:20429] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa2663a5]
-[compute-601-1:20429] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa2acbb7]
-[compute-601-1:20429] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b55aa2b5e4c]
-[compute-601-1:20429] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b55aa27ab1c]
-[compute-601-1:20429] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20429] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20429] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20429] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 3 with PID 20429 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20435] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20435] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20436] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20436] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20437] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20437] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20438] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20438] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20440] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20440] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20441] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20441] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20439] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20439] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20442] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20442] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...[compute-601-1:20439] *** Process received signal ***
-[compute-601-1:20439] Signal: Segmentation fault (11)
-[compute-601-1:20439] Signal code: Address not mapped (1)
-[compute-601-1:20439] Failing at address: 0x1a510bb8
-[compute-601-1:20439] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20439] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20439] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b090cc3bd0c]
-[compute-601-1:20439] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090cc6e50a]
-[compute-601-1:20439] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090ccdb3ea]
-[compute-601-1:20439] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090ccd5598]
-[compute-601-1:20439] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090cc70879]
-[compute-601-1:20439] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b090d25545a]
-[compute-601-1:20439] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090cc2e3a5]
-[compute-601-1:20439] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090cc74bb7]
-[compute-601-1:20439] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b090cc7de4c]
-[compute-601-1:20439] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b090cc42b1c]
-[compute-601-1:20439] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20439] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20439] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20439] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 4 with PID 20439 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20472] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20472] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20473] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20473] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20474] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20474] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20475] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20475] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...[compute-601-1:20474] *** Process received signal ***
-[compute-601-1:20474] Signal: Segmentation fault (11)
-[compute-601-1:20474] Signal code: Address not mapped (1)
-[compute-601-1:20474] Failing at address: 0x2b00236b5fc8
-[compute-601-1:20474] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20474] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20474] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b000ef8cd0c]
-[compute-601-1:20474] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000efbf50a]
-[compute-601-1:20474] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000f02c3ea]
-[compute-601-1:20474] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000f026598]
-[compute-601-1:20474] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000efc1879]
-[compute-601-1:20474] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b000f5a645a]
-[compute-601-1:20474] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000ef7f3a5]
-[compute-601-1:20474] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000efc5bb7]
-[compute-601-1:20474] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b000efcee4c]
-[compute-601-1:20474] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b000ef93b1c]
-[compute-601-1:20474] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20474] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20474] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20474] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 2 with PID 20474 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20531] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20531] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20529] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20529] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20532] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20532] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20534] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20534] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20533] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20533] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20530] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20530] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20535] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20535] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20536] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20536] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 4
-
-starting radix sort...[compute-601-1:20533] *** Process received signal ***
-[compute-601-1:20533] Signal: Segmentation fault (11)
-[compute-601-1:20533] Signal code: Address not mapped (1)
-[compute-601-1:20533] Failing at address: 0x2b0b5ad49fc8
-[compute-601-1:20533] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20533] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20533] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b0b4e621d0c]
-[compute-601-1:20533] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e65450a]
-[compute-601-1:20533] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e6c13ea]
-[compute-601-1:20533] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e6bb598]
-[compute-601-1:20533] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e656879]
-[compute-601-1:20533] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b0b4ec3b45a]
-[compute-601-1:20533] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e6143a5]
-[compute-601-1:20533] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e65abb7]
-[compute-601-1:20533] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b0b4e663e4c]
-[compute-601-1:20533] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b0b4e628b1c]
-[compute-601-1:20533] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20533] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20533] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20533] *** End of error message ***
---------------------------------------------------------------------------
-mpirun noticed that process rank 4 with PID 20533 on node compute-601-1.local exited on signal 11 (Segmentation fault).
---------------------------------------------------------------------------
-[compute-601-1.local:20614] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20614] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20615] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20615] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20617] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20617] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20616] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20616] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
-
-
-[compute-601-1.local:20625] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20625] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20624] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20624] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20623] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20623] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20626] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20626] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20628] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20628] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20627] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20627] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20629] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20629] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20630] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20630] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
 
 starting radix sort...finished
 
@@ -572,87 +26,27 @@ CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20637] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20637] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20636] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20636] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20638] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20638] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20639] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20639] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
+mask size = 4
 
 starting radix sort...finished
 
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
-
-
-[compute-601-1.local:20646] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20646] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20645] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20645] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20648] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20648] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20649] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20649] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20647] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20647] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20651] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20651] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20650] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20650] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20652] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20652] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is orderedCORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
 
-[compute-601-1.local:20658] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20658] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20659] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20659] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20660] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20660] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20661] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20661] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
+CORRECT! Result is ordered
+CORRECT! Result is ordered
+mask size = 4
 
-starting radix sort...finished
+starting radix sort...CORRECT! Result is ordered
+CORRECT! Result is ordered
+CORRECT! Result is ordered
+finished
 
 CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is orderedCORRECT! Result is ordered
-
-
-[compute-601-1.local:20668] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20668] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20667] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20667] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20670] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20670] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20671] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20671] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20669] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20669] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20672] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20672] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20673] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20673] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20674] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20674] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
+mask size = 4
 
 starting radix sort...finished
 
@@ -664,121 +58,103 @@ CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
 CORRECT! Result is ordered
-[compute-601-1.local:20682] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20682] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20681] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20681] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20684] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20684] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20683] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20683] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
+mask size = 4
 
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is orderedCORRECT! Result is ordered
-CORRECT! Result is ordered
-
-[compute-601-1.local:20691] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20691] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20690] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20690] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20692] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20692] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20695] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20695] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20693] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20693] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20694] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20694] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20697] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20697] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20696] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20696] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
-
-starting radix sort...finished
-
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-CORRECT! Result is ordered
-[compute-601-1.local:20729] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20729] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20728] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20728] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20730] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20730] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20727] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20727] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
-
-starting radix sort...[compute-601-1:20729] *** Process received signal ***
-[compute-601-1:20729] Signal: Segmentation fault (11)
-[compute-601-1:20729] Signal code: Address not mapped (1)
-[compute-601-1:20729] Failing at address: 0x2b1534b64fc8
-[compute-601-1:20729] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20729] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20729] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b152043bd0c]
-[compute-601-1:20729] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b152046e50a]
-[compute-601-1:20729] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b15204db3ea]
-[compute-601-1:20729] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b15204d5598]
-[compute-601-1:20729] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b1520470879]
-[compute-601-1:20729] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b1520a5545a]
-[compute-601-1:20729] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b152042e3a5]
-[compute-601-1:20729] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b1520474bb7]
-[compute-601-1:20729] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b152047de4c]
-[compute-601-1:20729] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b1520442b1c]
-[compute-601-1:20729] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20729] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20729] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20729] *** End of error message ***
+starting radix sort...[compute-601-1:07095] *** Process received signal ***
+[compute-601-1:07095] Signal: Segmentation fault (11)
+[compute-601-1:07095] Signal code: Address not mapped (1)
+[compute-601-1:07095] Failing at address: 0x1c1acbb8
+[compute-601-1:07095] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
+[compute-601-1:07095] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
+[compute-601-1:07095] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b06efdf896c]
+[compute-601-1:07095] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe2846a]
+[compute-601-1:07095] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe9386a]
+[compute-601-1:07095] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe8d9e8]
+[compute-601-1:07095] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe29a79]
+[compute-601-1:07095] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b06f040a45a]
+[compute-601-1:07095] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b06efdeb005]
+[compute-601-1:07095] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe2e067]
+[compute-601-1:07095] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b06efe372fc]
+[compute-601-1:07095] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b06efdff77c]
+[compute-601-1:07095] [12] bin/radix.mpi(main+0x335) [0x40b695]
+[compute-601-1:07095] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
+[compute-601-1:07095] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
+[compute-601-1:07095] *** End of error message ***
 --------------------------------------------------------------------------
-mpirun noticed that process rank 2 with PID 20729 on node compute-601-1.local exited on signal 11 (Segmentation fault).
+mpirun noticed that process rank 2 with PID 7095 on node compute-601-1.local exited on signal 11 (Segmentation fault).
 --------------------------------------------------------------------------
-[compute-601-1.local:20786] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20786] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20784] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20784] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20789] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20789] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20785] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20787] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20787] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20785] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20790] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20790] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20788] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20788] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-[compute-601-1.local:20791] Error in mx_init (error No MX device entry in /dev.)
-[compute-601-1.local:20791] mca_btl_mx_component_init: mx_get_info(MX_NIC_COUNT) failed with status 4(MX not initialized.)
-mask size = 8
+mask size = 4
 
-starting radix sort...[compute-601-1:20788] *** Process received signal ***
-[compute-601-1:20788] Signal: Segmentation fault (11)
-[compute-601-1:20788] Signal code: Address not mapped (1)
-[compute-601-1:20788] Failing at address: 0x2b25a9648fc8
-[compute-601-1:20788] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
-[compute-601-1:20788] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
-[compute-601-1:20788] [ 2] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b259cf20d0c]
-[compute-601-1:20788] [ 3] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cf5350a]
-[compute-601-1:20788] [ 4] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cfc03ea]
-[compute-601-1:20788] [ 5] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cfba598]
-[compute-601-1:20788] [ 6] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cf55879]
-[compute-601-1:20788] [ 7] /share/apps/openmpi-gnu-mx/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b259d53a45a]
-[compute-601-1:20788] [ 8] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cf133a5]
-[compute-601-1:20788] [ 9] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cf59bb7]
-[compute-601-1:20788] [10] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0 [0x2b259cf62e4c]
-[compute-601-1:20788] [11] /share/apps/openmpi-gnu-mx/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b259cf27b1c]
-[compute-601-1:20788] [12] bin/radix.mpi(main+0x335) [0x40b695]
-[compute-601-1:20788] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
-[compute-601-1:20788] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
-[compute-601-1:20788] *** End of error message ***
+starting radix sort...[compute-601-1:07132] *** Process received signal ***
+[compute-601-1:07132] Signal: Segmentation fault (11)
+[compute-601-1:07132] Signal code: Address not mapped (1)
+[compute-601-1:07132] Failing at address: 0xeadc668
+[compute-601-1:07132] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
+[compute-601-1:07132] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
+[compute-601-1:07132] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b708bd5e96c]
+[compute-601-1:07132] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b708bd8e46a]
+[compute-601-1:07132] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b708bdf986a]
+[compute-601-1:07132] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b708bdf39e8]
+[compute-601-1:07132] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b708bd8fa79]
+[compute-601-1:07132] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b708c37045a]
+[compute-601-1:07132] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b708bd51005]
+[compute-601-1:07132] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b708bd94067]
+[compute-601-1:07132] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b708bd9d2fc]
+[compute-601-1:07132] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b708bd6577c]
+[compute-601-1:07132] [12] bin/radix.mpi(main+0x335) [0x40b695]
+[compute-601-1:07132] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
+[compute-601-1:07132] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
+[compute-601-1:07132] *** End of error message ***
 --------------------------------------------------------------------------
-mpirun noticed that process rank 4 with PID 20788 on node compute-601-1.local exited on signal 11 (Segmentation fault).
+mpirun noticed that process rank 6 with PID 7132 on node compute-601-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-601-1:07141] *** Process received signal ***
+[compute-601-1:07141] Signal: Segmentation fault (11)
+[compute-601-1:07141] Signal code: Address not mapped (1)
+[compute-601-1:07141] Failing at address: 0x2b3d05077fc8
+[compute-601-1:07141] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
+[compute-601-1:07141] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
+[compute-601-1:07141] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b3cf0dd696c]
+[compute-601-1:07141] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e0646a]
+[compute-601-1:07141] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e7186a]
+[compute-601-1:07141] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e6b9e8]
+[compute-601-1:07141] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e07a79]
+[compute-601-1:07141] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b3cf13e845a]
+[compute-601-1:07141] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0dc9005]
+[compute-601-1:07141] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e0c067]
+[compute-601-1:07141] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b3cf0e152fc]
+[compute-601-1:07141] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b3cf0ddd77c]
+[compute-601-1:07141] [12] bin/radix.mpi(main+0x335) [0x40b695]
+[compute-601-1:07141] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
+[compute-601-1:07141] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
+[compute-601-1:07141] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 7141 on node compute-601-1.local exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+mask size = 4
+
+starting radix sort...[compute-601-1:07224] *** Process received signal ***
+[compute-601-1:07224] Signal: Segmentation fault (11)
+[compute-601-1:07224] Signal code: Address not mapped (1)
+[compute-601-1:07224] Failing at address: 0x2b8ee7bbffc8
+[compute-601-1:07224] [ 0] /lib64/libpthread.so.0 [0x3469c0e4c0]
+[compute-601-1:07224] [ 1] /lib64/libc.so.6(memcpy+0x15b) [0x346907b59b]
+[compute-601-1:07224] [ 2] /opt/openmpi/lib/libmpi.so.0(ompi_convertor_pack+0x12c) [0x2b8edb91f96c]
+[compute-601-1:07224] [ 3] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb94f46a]
+[compute-601-1:07224] [ 4] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb9ba86a]
+[compute-601-1:07224] [ 5] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb9b49e8]
+[compute-601-1:07224] [ 6] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb950a79]
+[compute-601-1:07224] [ 7] /opt/openmpi/lib/libopen-pal.so.0(opal_progress+0x5a) [0x2b8edbf3145a]
+[compute-601-1:07224] [ 8] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb912005]
+[compute-601-1:07224] [ 9] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb955067]
+[compute-601-1:07224] [10] /opt/openmpi/lib/libmpi.so.0 [0x2b8edb95e2fc]
+[compute-601-1:07224] [11] /opt/openmpi/lib/libmpi.so.0(MPI_Barrier+0x7c) [0x2b8edb92677c]
+[compute-601-1:07224] [12] bin/radix.mpi(main+0x335) [0x40b695]
+[compute-601-1:07224] [13] /lib64/libc.so.6(__libc_start_main+0xf4) [0x346901d974]
+[compute-601-1:07224] [14] bin/radix.mpi(__gxx_personality_v0+0x1a1) [0x409349]
+[compute-601-1:07224] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 4 with PID 7224 on node compute-601-1.local exited on signal 11 (Segmentation fault).
 --------------------------------------------------------------------------
