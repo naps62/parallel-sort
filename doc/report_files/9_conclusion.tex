@@ -1,5 +1,6 @@
 \section{Conclusion}
 \label{sec:conclusion}
-% TODO
 
-	Conclusion here
+Radix sort, or at least its Least Significant Digit version, is a strongly memory bound problem, since it consumes auxiliary memory for buckets equal to the size of the total input. Some other sorting algorithms, preferably in-place sorts, should scale much better on shared memory implementation.
+
+As already stated, implementation problems in the MPI versions hindered the results and conclusions of this versions, but of the few results given (some of them not shown here) suggested that speedups exist, and that the load balacing strategy might be useful, but only for larger inputs. Also, the original 40-fold speedup with 64 processors mentioned in \cite{paper} should not be used as comparison guideline for this results, as that was run on an older machine, with an architecture were memory bottleneck was not so big, since processors were not as evolved as today. Given that, memory bound algorithms such as Radix sort would scale better on those machines.
