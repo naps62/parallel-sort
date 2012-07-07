@@ -80,4 +80,3 @@ void read_arr(vector<unsigned int> &arr, unsigned int start) {
 	for(unsigned int i = 0; i < arr.size(); ++i)
 		file >> arr[i];
 }
-
