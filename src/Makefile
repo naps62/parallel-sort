@@ -10,11 +10,11 @@ EXE_TST=../bin/tests
 
 .PHONY: $(EXE_SEQ) $(EXE_OMP) $(EXE_MPI) $(EXE_TST)
 
-CC=icpc
+CC=g++
 LIB=-lrt
 CFLAGS= -Wall -O3
-OMP=-openmp
-TBB=-tbb
+OMP=-fopenmp
+TBB=-ltbb
 
 default: radix radix.omp radix.tbb
 
