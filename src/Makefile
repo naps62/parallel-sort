@@ -12,9 +12,9 @@ EXE_TST=../bin/tests
 
 CC=g++
 LIB=-lrt
-CFLAGS= -Wall -O3
+CFLAGS= -Wall -g
 
-default: radix.omp radix.tbb
+default: radix radix.omp radix.tbb
 
 all: radix radix.mpi radix.omp radix.balanced.mpi gen
 
@@ -36,7 +36,7 @@ radix.omp: common.o
 
 radix.tbb: common.o
 	g++ $(CFLAGS) -c radix.tbb.cpp -ltbb
-	g++ $(CFLAGS) common.o radix.tbb.o $(RAD_TBB) $(LIB) -ltbb
+	g++ $(CFLAGS) common.o radix.tbb.o -o $(RAD_TBB) $(LIB) -ltbb
 
 radix.mpi:
 	mpic++ $(CFLAGS) radix.mpi.cpp -c

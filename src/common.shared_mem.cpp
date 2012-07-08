@@ -35,8 +35,8 @@ unsigned int popcount(unsigned int x) {
 
 // maps a given bucket to a cpu, given max number of buckets per cpu
 #define GET_BUCKET_NUM(elem, mask, g, i) (((elem) & (mask)) >> ((g) * (i)))
-#define BUCKET_TO_CPU(bucket)		(((bucket) & (~((bpp) - 1))) >> bpp_bc)
-#define BUCKET_IN_CPU(bucket)       ( (bucket) & (  (bpp) - 1)            )
+#define BUCKET_TO_CPU(bucket)            (((bucket) & (~((bpp) - 1))) >> bpp_bc)
+#define BUCKET_IN_CPU(bucket)            ( (bucket) & (  (bpp) - 1)            )
 
 /**
  * it is assumed that B = P, only one bucket per processor
@@ -46,7 +46,7 @@ unsigned int popcount(unsigned int x) {
  * \param p   Number of processor (equivalent to MPI_size)
  * \param g   Number of bits to use for each mask (must be power of 2)
  */
-void radix_omp(radix_arr_t &arr, const unsigned int num_threads, const unsigned int g);
+void radix(radix_arr_t &arr, const unsigned int num_threads, const unsigned int g);
 
 
 
@@ -57,7 +57,7 @@ int check_array_order(radix_arr_t &arr) {
 		if (arr[i - 1] > arr[i])
 			return i;
 
-	return ORDER_CORRECT;
+	return -1;
 }
 
 int main(int argc, char **argv) {
@@ -68,41 +68,34 @@ int main(int argc, char **argv) {
 
 	Timer timer;
 
-	if (argc > 1)	len = atoi(argv[1]);
-	else           len = LEN;
+	if (argc != 4) {
+		cout << "usage: radix.{omp,tbb} <N> <mask_size> <n_threads>" << endl;
+		exit(-1);
+	}
 
-	if (argc > 2)	g = atoi(argv[2]);
-	else           g = 4;
-
-	if (argc > 3)	size = atoi(argv[3]);
-	else           size = 4;
-
-	cerr
-		<< "array len   = " << len << endl
-		<< "g           = "	<< g << endl
-		<< "num_threads = " << size << endl;
+	len  = atoi(argv[1]);
+	g    = atoi(argv[2]);
+	size = atoi(argv[3]);
 
 	vector<unsigned int> seq_arr(len);
 	radix_arr_t arr(len);
 	// generate test data
-	read_arr(len, 0);
+	read_arr(seq_arr, 0);
 	for(int i = 0; i < len; ++i)
 		arr[i] = seq_arr[i];
 
 	//cerr << "initial data: " << arr_str(arr) << endl;
 
 	// the real stuff
-	cerr << "starting radix sort...";
 	timer.start();
-	radix_omp(arr, size, g);
+	radix(arr, size, g);
 	timer.stop();
-	cerr << "finished" << endl << endl;
 
 	//cerr << arr_str(arr) << endl;
 	// check array order
 	int order = check_array_order(arr);
 	switch (order) {
-		case ORDER_CORRECT: 	cerr << "CORRECT! Result is ordered" << endl; break;
+		case -1: 	cerr << "CORRECT! Result is ordered" << endl; break;
 		default: 				cerr << "WRONG! Order fails at index " << order << endl; break;
 	}
 

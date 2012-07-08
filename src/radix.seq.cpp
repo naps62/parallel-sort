@@ -59,11 +59,13 @@ int main(int argc, char **argv) {
 	int len;
 	unsigned int g;
 
-	if (argc > 1)	len = atoi(argv[1]);
-	else			len = LEN;
+	if (argc != 3) {
+		cerr << "usage: radix.seq <N> <num_buckets>" << endl;
+		exit(-1);
+	}
 
-	if (argc > 2)   g = atoi(argv[2]);
-	else			g = 4;
+	len = atoi(argv[1]);
+	g = atoi(argv[2]);
 
 	vector<unsigned int> arr(len);
 	read_arr(arr, 0);
@@ -75,6 +77,7 @@ int main(int argc, char **argv) {
 	timer.stop();
 
 	int order = check_array_order(arr);
+	//dump_arr(arr);
 	if (order == 0)
 		cerr << "CORRECT! Result is ordered" << endl;
 	else

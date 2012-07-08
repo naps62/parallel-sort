@@ -1,10 +1,15 @@
 #define _OMP
-#include "common.shared_mem.cpp"
+
+#include <vector>
+using namespace std;
 
 typedef unsigned int uint;
 typedef vector<uint> radix_arr_t;
 
-void radix_omp(radix_arr_t &arr, const unsigned int num_threads, const unsigned int g) {
+#include "common.shared_mem.cpp"
+
+
+void radix(radix_arr_t &arr, const unsigned int num_threads, const unsigned int g) {
 
 	const unsigned int b	= (1 << g);				// num of buckets (2^g)
 	unsigned int bpp		= b / num_threads;		// num of buckets per thread
@@ -38,15 +43,8 @@ void radix_omp(radix_arr_t &arr, const unsigned int num_threads, const unsigned 
 			for(unsigned int i = 0; i < arr.size(); ++i) {
 				unsigned int elem = arr[i];
 				unsigned int bucket = GET_BUCKET_NUM(elem, mask, g, round);
-
-				//if (round == 0)
-				//	cout << elem << " goes to bucket " << bucket << " by thread " << BUCKET_TO_CPU(bucket) << endl;
-
-				// if this bucket is handled by this thread, insert
-				//if (round == 0) cout << "attempting " << BUCKET_TO_CPU(bucket) << " with " << thread_num << endl;
+				
 				if (BUCKET_TO_CPU(bucket) == thread_num) {
-					//if (round == 0)
-						//cout << "inserting " << elem << " into bucket " << bucket << endl;
 					buckets[bucket].push_back(elem);
 				}
 			}
@@ -59,7 +57,6 @@ void radix_omp(radix_arr_t &arr, const unsigned int num_threads, const unsigned 
 				//cout << round << " bucket[0] = " << sum << endl;
 				for(unsigned int i = 1; i < b; ++i) {
 					bucket_accum[i] = sum;
-					//cout << round << " bucket[" << i << "] = " << buckets[i].size() << endl;
 					sum += buckets[i].size();
 				}
 			}

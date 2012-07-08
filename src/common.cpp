@@ -27,10 +27,10 @@ long Timer::get() {
 }
 
 void dump_arr(vector<unsigned int> arr) {
-	cout << "[" << arr[0];
+	cerr << "[" << arr[0];
 	for(unsigned int i = 1; i < arr.size(); ++i)
-		cout << ", " << arr[i];
-	cout << "]" << endl;
+		cerr << ", " << arr[i];
+	cerr << "]" << endl;
 }
 
 string arr_str(vector<unsigned int> arr) {
