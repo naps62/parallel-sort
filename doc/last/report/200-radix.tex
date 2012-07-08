@@ -1,0 +1,31 @@
+\section{Radix Sort}
+\label{sec:200}
+
+Radix Sort is a non-comparative sorting algorithm that works on integer or string keys. The ordering is done by grouping keys into buckets, according to their individual digits.\\
+
+The approach used here is the \emph{Least Significant Digit} one, which is iterative in nature, running through all the elements once for every digit
+
+
+As a small example, consider the following list of integers:
+
+\begin{lstlisting}
+	arr = [170, 45, 75, 90, 24, 2, 66]
+\end{lstlisting}
+
+In the first iteration, the least significant digit is considered. After sending each key into the correct bucket, the result is the following:
+
+\begin{lstlisting}
+	0: [170, 90],
+	2: [2],
+	4: [24],
+	5: [45, 75],
+	6: [66]
+\end{lstlisting}
+
+And after merging all buckets:
+
+\begin{lstlisting}
+	arr = [170, 90, 2, 24, 45, 75, 66]
+\end{lstlisting}
+
+This completes the first iteration. The process is repeated until there are no more digits do process.

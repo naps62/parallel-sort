@@ -1,0 +1,6 @@
+\section{Test Methodology}
+\label{sec:700}
+
+All three versions of the algorithm analysed here (sequential, OpenMP and TBB) were tested and compared. For each version, 5 different input sizes were used, with all the input coming from the same randomly populated file, with over $2^26$ integer values. Digit size was also varied between 2 and 8 (although limitations in the OpenMP implementation only allowed it to be tested for 2, 4 and 8, and not the remaining values in the range).
+
+For both parallel versions, the number of threads was also varied, between 2 and 32. Even though, as noted on \cref{sec:600}, the environment used has 12 cores per node, meaning a multiple of 12 should provide a better value for the number of threads, the OpenMP version had limitations, mostly due to the usage of bitwise operators to simplify bucket calculations, and could only work with a number of threads that was a power of 2.

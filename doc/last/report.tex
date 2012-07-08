@@ -1,0 +1,107 @@
+\documentclass[abstract=on,10pt,twocolumn]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{datetime}
+
+\usepackage[paper=a4paper,top=2cm,left=1.5cm,right=1.5cm,bottom=2cm,foot=1cm]{geometry}
+
+\usepackage{relsize}%	relative font sizes
+
+\usepackage[retainorgcmds]{IEEEtrantools}%	IEEEeqnarray
+\setlength{\IEEEnormaljot}{4\IEEEnormaljot}
+
+\usepackage{indentfirst}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{cleveref}
+\usepackage{color}
+
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[cmex10]{amsmath}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\usepackage{xspace}
+\newcommand{\intel}{Intel\textsuperscript{\textregistered}\xspace}
+\newcommand{\xeon}{Xeon\textsuperscript{\textregistered}\xspace}
+
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	tabsize=3,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true
+}
+
+
+%%%%%%%%%%%%%%%%
+%  title page  %
+%%%%%%%%%%%%%%%%
+\titlehead{University of Minho \hfill Master's Degree in Informatics Engineering\\Department of Informatics \hfill Computer Graphics - Integrated Project}
+
+\title{Parallel Radix Sort}
+%\subtitle{A Comparison of Shared Memory Parallel Libraries}
+
+\author{
+    \\Miguel Palhas\\
+     	\texttt{\smaller pg19808@alunos.uminho.pt}
+}
+
+\date{Braga, \docdate}
+
+%\subject{PAPI CUDA}
+
+%%%%%%%%%%%
+%  Hacks  %
+%%%%%%%%%%%
+
+%	Paragraph (title) with linebreak
+\newcommand{\paragraphh}[1]{\paragraph{#1\hfill}\hfill
+
+}
+
+%	Add "Appendix" to the appendices titles, but not to the references
+\usepackage{ifthen}
+\newcommand*{\appendixmore}{%
+  \renewcommand*{\othersectionlevelsformat}[1]{%
+    \ifthenelse{\equal{##1}{section}}{\appendixname~}{}%
+    \csname the##1\endcsname\autodot\enskip}
+  \renewcommand*{\sectionmarkformat}{%
+    \appendixname~\thesection\autodot\enskip}
+}
+
+\newdateformat{mmmyyyydate}{\monthname[\THEMONTH] \THEYEAR}
+\newcommand{\docdate}{\mmmyyyydate\today}
+
+\newcommand{\tm}{\textsuperscript{\texttrademark}}
+\newcommand{\tr}{\textsuperscript{\textregistered}}
+
+\newcommand{\todonaps}{\todo[inline,color=green!40]}
+
+\begin{document}
+	\maketitle
+
+	\input{report/000-abstract}
+	\input{report/100-intro}
+	\input{report/200-radix}
+	\input{report/300-seq}
+	\input{report/400-omp}
+	\input{report/500-tbb}
+	\input{report/600-env}
+	\input{report/700-method}
+	\input{report/800-results}
+	\input{report/900-conclusions}
+
+	\nocite*
+	\bibliographystyle{cell}
+	\bibliography{references}
+
+\end{document}
