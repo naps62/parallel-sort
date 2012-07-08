@@ -23,7 +23,7 @@ void Timer::stop() {
 }
 
 long Timer::get() {
-	return (t_end.tv_sec - t_start.tv_sec) * 1e9 + (t_end.tv_nsec - t_start.tv_nsec);
+	return (t_end.tv_sec - t_start.tv_sec) * (unsigned int) 1e9 + (t_end.tv_nsec - t_start.tv_nsec);
 }
 
 void dump_arr(vector<unsigned int> arr) {
