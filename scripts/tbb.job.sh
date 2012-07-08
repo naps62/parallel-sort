@@ -20,17 +20,14 @@ for g in ${G[@]}; do
 
 		for threads in ${THREADS[@]}; do
 
-			mkdir -p results_601/tbb/gcc
-			mkdir -p results_601/tbb/icc
-			output_gcc=results_601/tbb/gcc/g${g}_s${size}_t${threads}
-			output_icc=results_601/tbb/icc/g${g}_s${size}_t${threads}
+			mkdir -p results_601/tbb
+			output=results_601/tbb/g${g}_s${size}_t${threads}
 			rm -rf $output && touch $output
 
 			for try in `seq 1 $NUM_EXECS`; do
 				echo "running try $try, g=$g, size=$size, threads=$threads"
 				echo "running try $try, g=$g, size=$size, threads=$threads" 1>&2
-				bin_gcc/radix.omp $size $g $threads >> $output_gcc
-				bin_icc/radix.omp $size $g $threads >> $output_icc
+				bin/radix.omp $size $g $threads >> $output
 			done
 		done
 	done
