@@ -148,5 +148,4 @@ void radix(radix_arr_t &arr, const unsigned int num_threads, const unsigned int 
 		cout << arr[i] << ", ";
 	cout << endl;
 	}	
-
 }

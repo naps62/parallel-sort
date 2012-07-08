@@ -85,4 +85,3 @@ int main(int argc, char **argv) {
 
 	cout << timer.get() * 1.0e-3 << endl;
 }
-
