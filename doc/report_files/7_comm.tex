@@ -1,0 +1,14 @@
+\section{Communication}
+\label{sec:comm}
+
+Each of the two MPI implementations consists of two communication steps, but they have different dimensions in each one.
+
+\begin{itemize}
+	\item \textbf{Bucket count communication}. In the first implementation, each process has to send each of their local bucket sizes to a single process. So for the complete matrix of all bucket sizes (this matrix has size $P \times B$) each element requires a single Send/Receive. This makes the complexity for this step $\Theta(P \cdot B)$
+		With the addition of load balance control, this entire matrix has to be sent to every processor, making complexity becomes $\Theta(P^2 \cdot B)$. Although this complexity is higher for the version that should provide the best results, this is because the main overhead is not in the bucket size communication, but in the communication of the elements themselves. The number of buckets is usually really small (only 256 buckets for $g=8$), and the input can consist in millions of elements, this difference is clear.
+
+	\item \textbf{Keys communication}. Each process has to send their local keys to the apropriate destination. So for $N$ keys, the complexity of communication becomes $O(N)$. Notice that this is $O$ notation and not $\Theta$ because some of the keys may already be in the appropriate process, requiring only a local copy in memory. The difference is in the balance of the keys. For the first version, the number of keys that a single process sends or receives can be anything between 0 and $N$, and it may happen that the weight of communication will be only in a subset of all processes, increasing communication delay. But in the second implementation, each process is garanteed to send exactly $N/P$ keys and receive that same amount back from other processes. This may have a huge impact in communication delay, and consequentely, in the overall performance of the algorithm.
+
+\end{itemize}
+
+Also note that this analysis refers only to a single iteration of radix sort. Every iteration has the same complexity, so the overall complexity will be equal to the one of a single iteration, multiplied by the number of iterations.

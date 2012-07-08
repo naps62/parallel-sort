@@ -3,6 +3,8 @@ Parallel Sorting
 
 Parallel sorting algorithm implementation in OpenMP and MPI
 
+Update: Now adding TBB version
+
 # References
 
 1. [Load Balanced Parallel Radix Sort](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.79.4515&rep=rep1&type=pdf)
