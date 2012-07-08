@@ -17,14 +17,17 @@ for g in ${G[@]}; do
 	
 	for size in ${SIZES[@]}; do
 
-		mkdir -p results_601/seq
-		output=results_601/seq/g${g}_s${size}
+		mkdir -p results_601/seq/gcc
+		mkdir -p results_601/seq/icc
+		output_gcc=results_601/seq/gcc/g${g}_s${size}
+		output_icc=results_601/seq/icc/g${g}_s${size}
 		rm $output && touch $output
 
 		for try in `seq 1 $NUM_EXECS`; do
 			echo "running try $try, g=$g, size=$size"
 			echo "running try $try, g=$g, size=$size" 1>&2
-			bin/radix.seq $size $g >> $output
+			bin_gcc/radix.seq $size $g >> $output_gcc
+			bin_icc/radix.seq $size $g >> $output_icc
 		done
 	done
 done
