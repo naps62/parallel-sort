@@ -1,0 +1,13 @@
+\section{Conclusions}
+\label{sec:900}
+
+\todonaps{GET THIS DONE}
+As for the programming approaches required by each of the two shared memory parallel libraries, it can be said that TBB, while providing excellent facilities to parallelize tasks and organize workload, also suffers from a couple of problems due to the paradigm it attempts to implement. Drawing much from functional paradigms, it requires the parallelizable logic to be encapsulated in a class object (namely, a \textit{Functor}). While this is good from a more abstract point of view, it also requires much more code to be written, for tasks that are sometimes rather simple. This issue might be solved with the usage of C++11 (recenlty known as C++0x), which allows the declaration of lambda functions. TBB supports this functions, allowing them to be passed as parameter to the parallelization directives, instead of an instance of a \textit{Functor}.
+
+Another point that might provide some pitfalls to TBB is the complete abstraction of the threading model. While it is usually good to let the library handle all the background tasks of allocating threads and distribute the workload, this is not always the case. For most tasks it also possible to parameterize TBB functions, for example, with information about the desired granularity, which is useful to have some degree of control about the degree of division of the task.
+
+It is not possible however, to have more low-level control over this. A particular example was found during the implementation of Radix Sort. Having each thread handling a set of buckets, with the index of those buckets being received as the chunck list to each thread, it was required to decide, for each element, wether or not the current thread was the one responsible for saving it. In OpenMP, this simply meant acquiring the thread id with the appropriate number, and decide from there if the destiny bucket was being handled by the current thread.
+In TBB, however, there is no such thing as a thread id. This makes sense, but only to a certain extent, since it is TBB who decides how many threads are spawned. The only possible control over this is the maximum number of threads, but never the actual exact amount can be specified.
+Because of this, the only way to determine if the bucket was assigned to the current thread was, for each element to insert, iterate over the entire chunck list, and check wether or not the index was there. This changed this computation from a simple bitwise operation and a comparison in OpenMP, to an entire loop in TBB
+
+Even though the chunck is probably small enough to eliminate any performance issues from this difference, the fact remains that the lack of a more controlable parallelization feature hurt this version.

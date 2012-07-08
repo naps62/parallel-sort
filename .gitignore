@@ -19,8 +19,12 @@ input
 
 # latex
 *.aux
-doc/*.aux
-doc/*.log
-doc/*.out
-doc/*.pdf
-doc/*.toc
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+*.fdb_latexmk
+*.bbl
+*.blg
+*.fls

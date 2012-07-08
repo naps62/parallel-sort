@@ -1,0 +1,12 @@
+\section{Threading Building Blocks}
+\label{sec:500}
+
+Intel\tr developed the C++ Template Library Threading Building Blocks to offer a parallelization approach where the focus of the programmer could stay away from the parallelism intrinsic issues, and stay on the algorithm and \textit{useful} code.
+
+The library attempts to provide an abstraction layer for the parallelism, effectively providing an almost completely different paradigm than the OpenMP library.
+
+The most basic parallel operator in TBB is the \texttt{parallel\_for} function, which is the equivalent of \texttt{\#pragma omp parallel for} directive in OpenMP. This function takes as an argument a \textit{Functor}, or a class instance that defines the computation to be done in parallel.
+
+TBB deals with the thread allocation and initialization, and also manages the workload, by dividing the range of iteration in chuncks. Each thread will receive a chunck that can be iterated just like a regular C++ collection. The \textit{Functor} allocated on that thread can then iterate through the chunck and perform the desired function, with full transparency from the threading and work assigning logic.
+
+Besides the particular implementation details, the Radix Sort implementation follows a similar structure to the OpenMP implementation. Since Radix Sort consists mostly on array operations and iterations, there was no need for any TBB more complex operators like \texttt{parallel\_reduce} or \texttt{parallel\_pipeline}. However, the \texttt{concurrent\_vector} class proved useful for some specific issues that required the usage of explicit locks in the OpenMP version.

@@ -1,0 +1,6 @@
+\section{Sequential Approach}
+\label{sec:300}
+
+The initial implementation is straigh-forward, following the previously given explanation. There are some particularities however. Instead of base-10 digits, groups of bits were used. Each digit consists of a group of bits, allowing for better performance (with the usage of bitwise operators), and also giving the possibility of easily varying the digit size, which directly influences overall performance.
+
+With a smaller amount of bits per digit, less buckets are created (number of buckets is $b=2^g$ where $g$ is the number of bits). Consequentely, more iterations will be necessary. On the other hand, a bigger value of $g$ will require more buckets, increasing data fragmentation and memory overhead.
