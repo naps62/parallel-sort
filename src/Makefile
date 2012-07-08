@@ -10,16 +10,15 @@ EXE_TST=../bin/tests
 
 .PHONY: $(EXE_SEQ) $(EXE_OMP) $(EXE_MPI) $(EXE_TST)
 
-CC=g++
+CC=icpc
 LIB=-lrt
-CFLAGS= -Wall -g
+CFLAGS= -Wall -O3
+OMP=-openmp
+TBB=-tbb
 
 default: radix radix.omp radix.tbb
 
 all: radix radix.mpi radix.omp radix.balanced.mpi gen
-
-.cpp.o:
-	$(CC) $(CFLAGS) -c $< -o $@
 
 gen:
 	g++ $(CFLAGS) gen.cpp -o ../bin/gen
@@ -28,15 +27,15 @@ tests: test.cpp
 	g++ $(CFLAGS) test.cpp common.cpp -o $(EXE_TST) $(LIB)
 
 radix: common.o radix.seq.o
-	g++ common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
+	$(CC) common.o radix.seq.o -o $(RAD_SEQ) $(LIB)
 
 radix.omp: common.o
-	g++ $(CFLAGS) -c radix.omp.cpp -fopenmp
-	g++ $(CFLAGS) common.o radix.omp.o -o $(RAD_OMP) $(LIB) -fopenmp
+	$(CC) $(CFLAGS) -c radix.omp.cpp $(OMP)
+	$(CC) $(CFLAGS) common.o radix.omp.o -o $(RAD_OMP) $(LIB) $(OMP)
 
 radix.tbb: common.o
-	g++ $(CFLAGS) -c radix.tbb.cpp -ltbb
-	g++ $(CFLAGS) common.o radix.tbb.o -o $(RAD_TBB) $(LIB) -ltbb
+	$(CC) $(CFLAGS) -c radix.tbb.cpp
+	$(CC) $(CFLAGS) common.o radix.tbb.o -o $(RAD_TBB) $(LIB) $(TBB)
 
 radix.mpi:
 	mpic++ $(CFLAGS) radix.mpi.cpp -c
@@ -48,3 +47,8 @@ radix.balanced.mpi:
 
 clean:
 	$(RM) *.o
+
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< -o $@
+
